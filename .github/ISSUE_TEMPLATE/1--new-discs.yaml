@@ -841,7 +841,7 @@ body:
   - type: input
     id: d_ring_0_ts1
     attributes:
-      label: Mastering Code
+      label: Mastering Code / Toolstamp
   - type: input
     id: d_ring_0_mo1_sid
     attributes:
@@ -865,7 +865,7 @@ body:
   - type: input
     id: d_ring_0_ts2
     attributes:
-      label: Mastering Code
+      label: Mastering Code / Toolstamp
   - type: input
     id: d_ring_0_mo2_sid
     attributes:
@@ -889,7 +889,7 @@ body:
   - type: input
     id: d_ring_0_ts3
     attributes:
-      label: Mastering Code
+      label: Mastering Code / Toolstamp
 
   - type: markdown
     attributes:
@@ -905,7 +905,7 @@ body:
   - type: input
     id: d_ring_0_ts4
     attributes:
-      label: Mastering Code
+      label: Mastering Code / Toolstamp
 
   # Skip d_ring_0_offsets - Unused in submission form
   # Skip d_ring_0_0_id - Unused in submission form
