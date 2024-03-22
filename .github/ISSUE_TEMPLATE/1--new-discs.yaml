@@ -48,26 +48,15 @@ body:
     validations:
       required: true
   - type: input
-    id: d_title_source
+    id: d_title
     attributes:
-      label: Source Title
+      label: Title
     validations:
       required: true
-  - type: container
-    id: additional_titles
-    components:
-    - type: input
-      id: d_title_additional
-      attributes:
-        label: Additional Title
-    - type: input
-      id: d_title_romanized
-      attributes:
-        label: Romanized Title
-    - type: input
-      id: d_title_unofficial
-      attributes:
-        label: Unofficial/Colloquial Title
+  - type: input
+    id: d_title_foreign
+    attributes:
+      label: Foreign Title (Non-Latin)
   - type: input
     id: d_number
     attributes:
