@@ -104,272 +104,272 @@ body:
     attributes:
       label: Region
       options:
-        - Afghanistan
-        - Aland Islands
-        - Albania
-        - Algeria
-        - American Samoa
-        - Andorra
-        - Angola
-        - Anguilla
-        - Antarctica
-        - Antigua and Barbuda
+        #- Afghanistan
+        #- Aland Islands
+        #- Albania
+        #- Algeria
+        #- American Samoa
+        #- Andorra
+        #- Angola
+        #- Anguilla
+        #- Antarctica
+        #- Antigua and Barbuda
         - Argentina
-        - Armenia
-        - Aruba
-        - Ascension Island
+        #- Armenia
+        #- Aruba
+        #- Ascension Island
         - Asia
         - Australia
         - Austria
-        - Azerbaijan
-        - Bahamas
-        - Bahrain
-        - Bangladesh
-        - Barbados
+        #- Azerbaijan
+        #- Bahamas
+        #- Bahrain
+        #- Bangladesh
+        #- Barbados
         - Belarus
         - Belgium
-        - Belize
-        - Benin
-        - Bermuda
-        - Bhutan
-        - Bolivia
-        - Bonaire
-        - Bosnia and Herzegovina
-        - Botswana
-        - Bouvet Island
+        #- Belize
+        #- Benin
+        #- Bermuda
+        #- Bhutan
+        #- Bolivia
+        #- Bonaire
+        #- Bosnia and Herzegovina
+        #- Botswana
+        #- Bouvet Island
         - Brazil
-        - British Indian Ocean Territory
-        - Brunei Darussalam
+        #- British Indian Ocean Territory
+        #- Brunei Darussalam
         - Bulgaria
-        - Burkina Faso
-        - Burundi
-        - Cabo Verde
-        - Cambodia
-        - Cameroon
+        #- Burkina Faso
+        #- Burundi
+        #- Cabo Verde
+        #- Cambodia
+        #- Cameroon
         - Canada
-        - Canary Islands
-        - Cayman Islands
-        - Central African Republic
-        - Ceuta Melilla
-        - Chad
-        - Chile
+        #- Canary Islands
+        #- Cayman Islands
+        #- Central African Republic
+        #- Ceuta Melilla
+        #- Chad
+        #- Chile
         - China
-        - Christmas Island
-        - Clipperton Island
-        - Cocos Islands
-        - Colombia
-        - Comoros
-        - Congo
-        - Cook Islands
-        - Costa Rica
-        - Cote d' Ivoire
+        #- Christmas Island
+        #- Clipperton Island
+        #- Cocos Islands
+        #- Colombia
+        #- Comoros
+        #- Congo
+        #- Cook Islands
+        #- Costa Rica
+        #- Cote d' Ivoire
         - Croatia
-        - Cuba
-        - Curacao
-        - Cyprus
+        #- Cuba
+        #- Curacao
+        #- Cyprus
         - Czechia
-        - Czechoslovakia
-        - Democratic Republic of the Congo
+        #- Czechoslovakia
+        #- Democratic Republic of the Congo
         - Denmark
-        - Diego Garcia
-        - Djibouti
-        - Dominica
-        - Dominican Republic
-        - Ecuador
-        - Egypt
-        - El Salvador
-        - Equatorial Guinea
-        - Eritrea
+        #- Diego Garcia
+        #- Djibouti
+        #- Dominica
+        #- Dominican Republic
+        #- Ecuador
+        #- Egypt
+        #- El Salvador
+        #- Equatorial Guinea
+        #- Eritrea
         - Estonia
-        - Eswatini
-        - Ethiopia
+        #- Eswatini
+        #- Ethiopia
         - Europe
-        - Falkland Islands
-        - Faroe Islands
-        - Federated States of Micronesia
-        - Fiji
+        #- Falkland Islands
+        #- Faroe Islands
+        #- Federated States of Micronesia
+        #- Fiji
         - Finland
         - France
-        - French Guiana
-        - French Polynesia
-        - French Southern Territories
-        - Gabon
-        - Gambia
-        - Georgia
+        #- French Guiana
+        #- French Polynesia
+        #- French Southern Territories
+        #- Gabon
+        #- Gambia
+        #- Georgia
         - Germany
-        - Ghana
-        - Gibraltar
+        #- Ghana
+        #- Gibraltar
         - Greater China
         - Greece
-        - Greenland
-        - Grenada
-        - Guadeloupe
-        - Guam
-        - Guatemala
-        - Guernsey
-        - Guinea
-        - Guinea Bissau
-        - Guyana
-        - Haiti
-        - Heard Island and McDonald Islands
-        - Holy See
-        - Honduras
+        #- Greenland
+        #- Grenada
+        #- Guadeloupe
+        #- Guam
+        #- Guatemala
+        #- Guernsey
+        #- Guinea
+        #- Guinea Bissau
+        #- Guyana
+        #- Haiti
+        #- Heard Island and McDonald Islands
+        #- Holy See
+        #- Honduras
         - Hong Kong
         - Hungary
         - Iceland
         - India
-        - Indonesia
-        - Iran
-        - Iraq
+        #- Indonesia
+        #- Iran
+        #- Iraq
         - Ireland
-        - Island of Sark
-        - Isle of Man
+        #- Island of Sark
+        #- Isle of Man
         - Israel
         - Italy
-        - Jamaica
+        #- Jamaica
         - Japan
-        - Jersey
-        - Jordan
-        - Kazakhstan
-        - Kenya
-        - Kiribati
-        - North Korea
+        #- Jersey
+        #- Jordan
+        #- Kazakhstan
+        #- Kenya
+        #- Kiribati
+        #- North Korea
         - South Korea
-        - Kuwait
-        - Kyrgyzstan
-        - Laos
+        #- Kuwait
+        #- Kyrgyzstan
+        #- Laos
         - Latin America
-        - Latvia
-        - Lebanon
-        - Lesotho
-        - Liberia
-        - Libya
-        - Liechtenstein
+        #- Latvia
+        #- Lebanon
+        #- Lesotho
+        #- Liberia
+        #- Libya
+        #- Liechtenstein
         - Lithuania
-        - Luxembourg
-        - Macao
-        - Madagascar
-        - Malawi
-        - Malaysia
-        - Maldives
-        - Mali
-        - Malta
-        - Marshal lIslands
-        - Martinique
-        - Mauritania
-        - Mauritius
-        - Mayotte
+        #- Luxembourg
+        #- Macao
+        #- Madagascar
+        #- Malawi
+        #- Malaysia
+        #- Maldives
+        #- Mali
+        #- Malta
+        #- Marshal lIslands
+        #- Martinique
+        #- Mauritania
+        #- Mauritius
+        #- Mayotte
         - Mexico
-        - Monaco
-        - Mongolia
-        - Montenegro
-        - Montserrat
-        - Morocco
-        - Mozambique
-        - Myanmar
-        - Namibia
-        - Nauru
-        - Nepal
+        #- Monaco
+        #- Mongolia
+        #- Montenegro
+        #- Montserrat
+        #- Morocco
+        #- Mozambique
+        #- Myanmar
+        #- Namibia
+        #- Nauru
+        #- Nepal
         - Netherlands
-        - Netherlands Antilles
-        - New Caledonia
+        #- Netherlands Antilles
+        #- New Caledonia
         - New Zealand
-        - Nicaragua
-        - Niger
-        - Nigeria
-        - Niue
-        - Norfolk Island
-        - North Macedonia
-        - Northern Mariana Islands
+        #- Nicaragua
+        #- Niger
+        #- Nigeria
+        #- Niue
+        #- Norfolk Island
+        #- North Macedonia
+        #- Northern Mariana Islands
         - Norway
-        - Oman
-        - Pakistan
-        - Palau
-        - Panama
-        - Papua New Guinea
-        - Paraguay
-        - Peru
-        - Philippines
-        - Pitcairn
+        #- Oman
+        #- Pakistan
+        #- Palau
+        #- Panama
+        #- Papua New Guinea
+        #- Paraguay
+        #- Peru
+        #- Philippines
+        #- Pitcairn
         - Poland
         - Portugal
-        - Puerto Rico
-        - Qatar
-        - Republic of Moldova
-        - Reunion
+        #- Puerto Rico
+        #- Qatar
+        #- Republic of Moldova
+        #- Reunion
         - Romania
         - Russian Federation
-        - Rwanda
-        - Saint Barthelemy
-        - Saint Helena
-        - Saint Kitts and Nevis
-        - Saint Lucia
-        - Saint Martin
-        - Saint Pierre and Miquelon
-        - Saint Vincent and the Grenadines
-        - Samoa
-        - San Marino
-        - Sao Tome and Principe
-        - Saudi Arabia
+        #- Rwanda
+        #- Saint Barthelemy
+        #- Saint Helena
+        #- Saint Kitts and Nevis
+        #- Saint Lucia
+        #- Saint Martin
+        #- Saint Pierre and Miquelon
+        #- Saint Vincent and the Grenadines
+        #- Samoa
+        #- San Marino
+        #- Sao Tome and Principe
+        #- Saudi Arabia
         - Scandinavia
-        - Senegal
+        #- Senegal
         - Serbia
-        - Seychelles
-        - Sierra Leone
+        #- Seychelles
+        #- Sierra Leone
         - Singapore
-        - Sint Maarten
+        #- Sint Maarten
         - Slovakia
-        - Slovenia
-        - Solomon Islands
-        - Somalia
+        #- Slovenia
+        #- Solomon Islands
+        #- Somalia
         - South Africa
-        - South Georgia
-        - South Sudan
+        #- South Georgia
+        #- South Sudan
         - Spain
-        - Sri Lanka
-        - State of Palestine
-        - Sudan
-        - Suriname
-        - Svalbard and Jan Mayen
+        #- Sri Lanka
+        #- State of Palestine
+        #- Sudan
+        #- Suriname
+        #- Svalbard and Jan Mayen
         - Sweden
         - Switzerland
-        - Syrian Arab Republic
+        #- Syrian Arab Republic
         - Taiwan
-        - Tajikistan
+        #- Tajikistan
         - Thailand
-        - Timor Leste
-        - Togo
-        - Tokelau
-        - Tonga
-        - Trinidad and Tobago
-        - Tristan da Cunha
-        - Tunisia
+        #- Timor Leste
+        #- Togo
+        #- Tokelau
+        #- Tonga
+        #- Trinidad and Tobago
+        #- Tristan da Cunha
+        #- Tunisia
         - Turkey
-        - Turkmenistan
-        - Turks and Caicos Islands
-        - Tuvalu
-        - Uganda
+        #- Turkmenistan
+        #- Turks and Caicos Islands
+        #- Tuvalu
+        #- Uganda
         - United Kingdom
         - Ukraine
         - United Arab Emirates
-        - United Republic of Tanzania
-        - United States Minor Outlying Islands
-        - Uruguay
+        #- United Republic of Tanzania
+        #- United States Minor Outlying Islands
+        #- Uruguay
         - United States of America
-        - USSR
-        - Uzbekistan
-        - Vanuatu
-        - Venezuela
-        - VietNam
-        - British Virgin Islands
-        - US Virgin Islands
-        - Wallis and Futuna
-        - Western Sahara
+        #- USSR
+        #- Uzbekistan
+        #- Vanuatu
+        #- Venezuela
+        #- Viet Nam
+        #- British Virgin Islands
+        #- US Virgin Islands
+        #- Wallis and Futuna
+        #- Western Sahara
         - World
-        - Yemen
-        - Yugoslavia
-        - Zambia
-        - Zimbabwe
+        #- Yemen
+        #- Yugoslavia
+        #- Zambia
+        #- Zimbabwe
   - type: checkboxes
     id: d_languages
     attributes:
