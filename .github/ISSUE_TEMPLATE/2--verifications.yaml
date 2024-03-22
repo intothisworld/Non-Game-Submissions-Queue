@@ -375,426 +375,426 @@ body:
     attributes:
       label: Languages
       options:
-        - label: Abkhazian
-        - label: Achinese
-        - label: Acoli
-        - label: Adangme
-        - label: Adyghe
-        - label: Afar
-        - label: Afrihili
+        #- label: Abkhazian
+        #- label: Achinese
+        #- label: Acoli
+        #- label: Adangme
+        #- label: Adyghe
+        #- label: Afar
+        #- label: Afrihili
         - label: Afrikaans
-        - label: Ainu
-        - label: Akan
-        - label: Akkadian
+        #- label: Ainu
+        #- label: Akan
+        #- label: Akkadian
         - label: Albanian
-        - label: Aleut
-        - label: Amharic
-        - label: Angika
+        #- label: Aleut
+        #- label: Amharic
+        #- label: Angika
         - label: Arabic
-        - label: Aragonese
-        - label: Aramaic
+        #- label: Aragonese
+        #- label: Aramaic
         - label: Armenian
-        - label: Arapaho
-        - label: Aromanian
-        - label: Arawak
-        - label: Assamese
-        - label: Asturian
-        - label: Athapascan
-        - label: Avaric
-        - label: Avestan
-        - label: Awadhi
-        - label: Aymara
-        - label: Azerbaijani
-        - label: Balinese
-        - label: Baluchi
-        - label: Bambara
-        - label: Basa
-        - label: Bashkir
+        #- label: Arapaho
+        #- label: Aromanian
+        #- label: Arawak
+        #- label: Assamese
+        #- label: Asturian
+        #- label: Athapascan
+        #- label: Avaric
+        #- label: Avestan
+        #- label: Awadhi
+        #- label: Aymara
+        #- label: Azerbaijani
+        #- label: Balinese
+        #- label: Baluchi
+        #- label: Bambara
+        #- label: Basa
+        #- label: Bashkir
         - label: Basque
-        - label: Beja
+        #- label: Beja
         - label: Belarusian
-        - label: Bemba
-        - label: Bengali
-        - label: Bhojpuri
-        - label: Bikol
-        - label: Bini
-        - label: Bislama
-        - label: Blin
-        - label: Blissymbols
-        - label: Bosnian
-        - label: Braj
-        - label: Breton
-        - label: Buginese
+        #- label: Bemba
+        #- label: Bengali
+        #- label: Bhojpuri
+        #- label: Bikol
+        #- label: Bini
+        #- label: Bislama
+        #- label: Blin
+        #- label: Blissymbols
+        #- label: Bosnian
+        #- label: Braj
+        #- label: Breton
+        #- label: Buginese
         - label: Bulgarian
-        - label: Buriat
-        - label: Burmese
-        - label: Caddo
+        #- label: Buriat
+        #- label: Burmese
+        #- label: Caddo
         - label: Catalan
-        - label: Cebuano
-        - label: CentralKhmer
-        - label: Chagatai
-        - label: Chamorro
-        - label: Chechen
-        - label: Cherokee
-        - label: Cheyenne
-        - label: Chibcha
-        - label: Chichewa
+        #- label: Cebuano
+        #- label: Central Khmer
+        #- label: Chagatai
+        #- label: Chamorro
+        #- label: Chechen
+        #- label: Cherokee
+        #- label: Cheyenne
+        #- label: Chibcha
+        #- label: Chichewa
         - label: Chinese
-        - label: ChinookJargon
-        - label: Chipewyan
-        - label: Choctaw
-        - label: ChurchSlavic
-        - label: Chuukese
-        - label: Chuvash
-        - label: ClassicalNewari
-        - label: Coptic
-        - label: Cornish
-        - label: Corsican
-        - label: Cree
-        - label: Creek
-        - label: CreolesAndPidgins
-        - label: EnglishCreole
-        - label: FrenchCreole
-        - label: PortugueseCreole
-        - label: CrimeanTatar
+        #- label: Chinook Jargon
+        #- label: Chipewyan
+        #- label: Choctaw
+        #- label: Church Slavic
+        #- label: Chuukese
+        #- label: Chuvash
+        #- label: Classical Newari
+        #- label: Coptic
+        #- label: Cornish
+        #- label: Corsican
+        #- label: Cree
+        #- label: Creek
+        #- label: Creoles and Pidgins
+        #- label: English Creole
+        #- label: French Creole
+        #- label: Portuguese Creole
+        #- label: Crimean Tatar
         - label: Croatian
         - label: Czech
-        - label: Dakota
+        #- label: Dakota
         - label: Danish
-        - label: Dargwa
-        - label: Delaware
-        - label: Dinka
-        - label: Divehi
-        - label: Dogrib
-        - label: Dogri
-        - label: Duala
+        #- label: Dargwa
+        #- label: Delaware
+        #- label: Dinka
+        #- label: Divehi
+        #- label: Dogrib
+        #- label: Dogri
+        #- label: Duala
         - label: Dutch
-        - label: MiddleDutch
-        - label: Dyula
-        - label: Dzongkha
-        - label: EasternFrisian
-        - label: Efik
-        - label: AncientEgyptian
-        - label: Ekajuk
-        - label: Elamite
+        #- label: Middle Dutch
+        #- label: Dyula
+        #- label: Dzongkha
+        #- label: Eastern Frisian
+        #- label: Efik
+        #- label: Ancient Egyptian
+        #- label: Ekajuk
+        #- label: Elamite
         - label: English
-        - label: OldEnglish
-        - label: MiddleEnglish
-        - label: Erzya
-        - label: Esperanto
+        #- label: Old English
+        #- label: Middle English
+        #- label: Erzya
+        #- label: Esperanto
         - label: Estonian
-        - label: Ewe
-        - label: Ewondo
-        - label: Fang
-        - label: Faroese
-        - label: Fanti
-        - label: Fijian
+        #- label: Ewe
+        #- label: Ewondo
+        #- label: Fang
+        #- label: Faroese
+        #- label: Fanti
+        #- label: Fijian
         - label: Filipino
         - label: Finnish
-        - label: Fon
+        #- label: Fon
         - label: French
-        - label: MiddleFrench
-        - label: OldFrench
-        - label: Friulian
-        - label: Fulah
-        - label: Ga
+        #- label: Middle French
+        #- label: Old French
+        #- label: Friulian
+        #- label: Fulah
+        #- label: Ga
         - label: Gaelic
-        - label: GalibiCarib
-        - label: Galician
-        - label: Ganda
-        - label: Gayo
-        - label: Gbaya
-        - label: Geez
-        - label: Georgian
+        #- label: Galibi Carib
+        #- label: Galician
+        #- label: Ganda
+        #- label: Gayo
+        #- label: Gbaya
+        #- label: Geez
+        #- label: Georgian
         - label: German
-        - label: MiddleHighGerman
-        - label: OldHighGerman
-        - label: Gilbertese
-        - label: Gondi
-        - label: Gorontalo
-        - label: Gothic
-        - label: Grebo
+        #- label: Middle High German
+        #- label: Old High German
+        #- label: Gilbertese
+        #- label: Gondi
+        #- label: Gorontalo
+        #- label: Gothic
+        #- label: Grebo
         - label: Greek
-        - label: AncientGreek
-        - label: Guarani
-        - label: Gujarati
-        - label: Gwichin
-        - label: Haida
-        - label: Haitian
-        - label: Hausa
-        - label: Hawaiian
+        #- label: Ancient Greek
+        #- label: Guarani
+        #- label: Gujarati
+        #- label: Gwichin
+        #- label: Haida
+        #- label: Haitian
+        #- label: Hausa
+        #- label: Hawaiian
         - label: Hebrew
-        - label: Herero
-        - label: Hiligaynon
+        #- label: Herero
+        #- label: Hiligaynon
         - label: Hindi
-        - label: HiriMotu
-        - label: Hittite
-        - label: Hmong
+        #- label: Hiri Motu
+        #- label: Hittite
+        #- label: Hmong
         - label: Hungarian
-        - label: Hupa
-        - label: Iban
+        #- label: Hupa
+        #- label: Iban
         - label: Icelandic
-        - label: Ido
-        - label: Igbo
-        - label: Iloko
-        - label: InariSami
+        #- label: Ido
+        #- label: Igbo
+        #- label: Iloko
+        #- label: Inari Sami
         - label: Indonesian
-        - label: Ingush
-        - label: Interlingua
-        - label: Interlingue
-        - label: Inuktitut
-        - label: Inupiaq
+        #- label: Ingush
+        #- label: Interlingua
+        #- label: Interlingue
+        #- label: Inuktitut
+        #- label: Inupiaq
         - label: Irish
-        - label: MiddleIrish
-        - label: OldIrish
+        #- label: Middle Irish
+        #- label: Old Irish
         - label: Italian
         - label: Japanese
-        - label: Javanese
-        - label: JudeoArabic
-        - label: JudeoPersian
-        - label: Kabardian
-        - label: Kabyle
-        - label: Kachin
-        - label: Kalaallisut
-        - label: Kalmyk
-        - label: Kamba
-        - label: Kannada
-        - label: Kanuri
-        - label: KarachayBalkar
-        - label: KaraKalpak
-        - label: Karelian
-        - label: Kashmiri
-        - label: Kashubian
-        - label: Kawi
-        - label: Kazakh
-        - label: Khasi
-        - label: Khotanese
-        - label: Kikuyu
-        - label: Kimbundu
-        - label: Kinyarwanda
-        - label: Kirghiz
-        - label: Klingon
-        - label: Komi
-        - label: Kongo
-        - label: Konkani
+        #- label: Javanese
+        #- label: Judeo Arabic
+        #- label: Judeo Persian
+        #- label: Kabardian
+        #- label: Kabyle
+        #- label: Kachin
+        #- label: Kalaallisut
+        #- label: Kalmyk
+        #- label: Kamba
+        #- label: Kannada
+        #- label: Kanuri
+        #- label: Karachay Balkar
+        #- label: Kara Kalpak
+        #- label: Karelian
+        #- label: Kashmiri
+        #- label: Kashubian
+        #- label: Kawi
+        #- label: Kazakh
+        #- label: Khasi
+        #- label: Khotanese
+        #- label: Kikuyu
+        #- label: Kimbundu
+        #- label: Kinyarwanda
+        #- label: Kirghiz
+        #- label: Klingon
+        #- label: Komi
+        #- label: Kongo
+        #- label: Konkani
         - label: Korean
-        - label: Kosraean
-        - label: Kpelle
-        - label: Kuanyama
-        - label: Kumyk
-        - label: Kurdish
-        - label: Kurukh
-        - label: Kutenai
-        - label: Ladino
-        - label: Lahnda
-        - label: Lamba
-        - label: Lao
+        #- label: Kosraean
+        #- label: Kpelle
+        #- label: Kuanyama
+        #- label: Kumyk
+        #- label: Kurdish
+        #- label: Kurukh
+        #- label: Kutenai
+        #- label: Ladino
+        #- label: Lahnda
+        #- label: Lamba
+        #- label: Lao
         - label: Latin
         - label: Latvian
-        - label: Lezghian
-        - label: Limburgan
-        - label: Lingala
+        #- label: Lezghian
+        #- label: Limburgan
+        #- label: Lingala
         - label: Lithuanian
-        - label: Lojban
-        - label: LowGerman
-        - label: LowerSorbian
-        - label: Lozi
-        - label: LubaKatanga
-        - label: LubaLulua
-        - label: Luiseno
-        - label: LuleSami
-        - label: Lunda
-        - label: Luo
-        - label: Lushai
-        - label: Luxembourgish
+        #- label: Lojban
+        #- label: Low German
+        #- label: Lower Sorbian
+        #- label: Lozi
+        #- label: Luba Katanga
+        #- label: Luba Lulua
+        #- label: Luiseno
+        #- label: Lule Sami
+        #- label: Lunda
+        #- label: Luo
+        #- label: Lushai
+        #- label: Luxembourgish
         - label: Macedonian
-        - label: Madurese
-        - label: Magahi
-        - label: Maithili
-        - label: Makasar
-        - label: Malagasy
+        #- label: Madurese
+        #- label: Magahi
+        #- label: Maithili
+        #- label: Makasar
+        #- label: Malagasy
         - label: Malay
-        - label: Malayalam
-        - label: Maltese
-        - label: Manchu
-        - label: Mandar
-        - label: Mandingo
-        - label: Manipuri
-        - label: Manx
-        - label: Maori
-        - label: Mapudungun
-        - label: Marathi
-        - label: Mari
-        - label: Marshallese
-        - label: Marwari
-        - label: Masai
-        - label: Mende
-        - label: Mikmaq
-        - label: Minangkabau
-        - label: Mirandese
-        - label: Mohawk
-        - label: Moksha
-        - label: Mongo
-        - label: Mongolian
-        - label: Montenegrin
-        - label: Mossi
-        - label: NKo
-        - label: Nauru
-        - label: Navajo
-        - label: Ndonga
-        - label: Neapolitan
-        - label: NepalBhasa
-        - label: Nepali
-        - label: Nias
-        - label: Niuean
-        - label: Nogai
-        - label: OldNorse
-        - label: NorthNdebele
-        - label: NorthernFrisian
-        - label: NorthernSami
+        #- label: Malayalam
+        #- label: Maltese
+        #- label: Manchu
+        #- label: Mandar
+        #- label: Mandingo
+        #- label: Manipuri
+        #- label: Manx
+        #- label: Maori
+        #- label: Mapudungun
+        #- label: Marathi
+        #- label: Mari
+        #- label: Marshallese
+        #- label: Marwari
+        #- label: Masai
+        #- label: Mende
+        #- label: Mikmaq
+        #- label: Minangkabau
+        #- label: Mirandese
+        #- label: Mohawk
+        #- label: Moksha
+        #- label: Mongo
+        #- label: Mongolian
+        #- label: Montenegrin
+        #- label: Mossi
+        #- label: N'Ko
+        #- label: Nauru
+        #- label: Navajo
+        #- label: N'donga
+        #- label: Neapolitan
+        #- label: Nepal Bhasa
+        #- label: Nepali
+        #- label: Nias
+        #- label: Niuean
+        #- label: Nogai
+        #- label: OldNorse
+        #- label: North Ndebele
+        #- label: Northern Frisian
+        #- label: Northern Sami
         - label: Norwegian
-        - label: NorwegianBokmal
-        - label: NorwegianNynorsk
-        - label: Nyamwezi
-        - label: Nyankole
-        - label: Nyoro
-        - label: Nzima
-        - label: Occitan
-        - label: OldOccitan
-        - label: Ojibwa
-        - label: Oriya
-        - label: Oromo
-        - label: Osage
-        - label: Ossetian
-        - label: Pahlavi
-        - label: Palauan
-        - label: Pali
-        - label: Pampanga
-        - label: Pangasinan
-        - label: Panjabi
-        - label: Papiamento
-        - label: Pedi
-        - label: Persian
-        - label: OldPersian
-        - label: Phoenician
+        #- label: Norwegian Bokmal
+        #- label: Norwegian Nynorsk
+        #- label: Nyamwezi
+        #- label: Nyankole
+        #- label: Nyoro
+        #- label: Nzima
+        #- label: Occitan
+        #- label: Old Occitan
+        #- label: Ojibwa
+        #- label: Oriya
+        #- label: Oromo
+        #- label: Osage
+        #- label: Ossetian
+        #- label: Pahlavi
+        #- label: Palauan
+        #- label: Pali
+        #- label: Pampanga
+        #- label: Pangasinan
+        #- label: Panjabi
+        #- label: Papiamento
+        #- label: Pedi
+        #- label: Persian
+        #- label: Old Persian
+        #- label: Phoenician
         - label: Polish
         - label: Portuguese
-        - label: Pushto
-        - label: Quechua
-        - label: Rajasthani
-        - label: Rapanui
-        - label: Rarotongan
+        #- label: Pushto
+        #- label: Quechua
+        #- label: Rajasthani
+        #- label: Rapanui
+        #- label: Rarotongan
         - label: Romanian
-        - label: Romansh
-        - label: Romany
-        - label: Rundi
+        #- label: Romansh
+        #- label: Romany
+        #- label: Rundi
         - label: Russian
-        - label: SamaritanAramaic
-        - label: Samoan
-        - label: Sandawe
-        - label: Sango
-        - label: Sanskrit
-        - label: Santali
-        - label: Sardinian
-        - label: Sasak
-        - label: Scots
-        - label: Selkup
+        #- label: Samaritan Aramaic
+        #- label: Samoan
+        #- label: Sandawe
+        #- label: Sango
+        #- label: Sanskrit
+        #- label: Santali
+        #- label: Sardinian
+        #- label: Sasak
+        #- label: Scots
+        #- label: Selkup
         - label: Serbian
-        - label: Serer
-        - label: Shan
-        - label: Shona
-        - label: SichuanYi
-        - label: Sicilian
-        - label: Sidamo
-        - label: SignLanguages
-        - label: Siksika
-        - label: Sindhi
-        - label: Sinhala
-        - label: SkoltSami
+        #- label: Serer
+        #- label: Shan
+        #- label: Shona
+        #- label: Sichuan Yi
+        #- label: Sicilian
+        #- label: Sidamo
+        #- label: Sign Languages
+        #- label: Siksika
+        #- label: Sindhi
+        #- label: Sinhala
+        #- label: Skolt Sami
         - label: Slovak
         - label: Slovenian
-        - label: Sogdian
-        - label: Somali
-        - label: Soninke
-        - label: Sotho
-        - label: SouthNdebele
-        - label: SouthernAltai
-        - label: SouthernSami
+        #- label: Sogdian
+        #- label: Somali
+        #- label: Soninke
+        #- label: Sotho
+        #- label: South Ndebele
+        #- label: Southern Altai
+        #- label: Southern Sami
         - label: Spanish
-        - label: SrananTongo
-        - label: StandardMoroccanTamazight
-        - label: Sukuma
-        - label: Sumerian
-        - label: Sundanese
-        - label: Susu
-        - label: Swahili
-        - label: Swati
+        #- label: Sranan Tongo
+        #- label: Standard Moroccan Tamazight
+        #- label: Sukuma
+        #- label: Sumerian
+        #- label: Sundanese
+        #- label: Susu
+        #- label: Swahili
+        #- label: Swati
         - label: Swedish
-        - label: SwissGerman
-        - label: Syriac
-        - label: ClassicalSyriac
+        #- label: Swiss German
+        #- label: Syriac
+        #- label: Classica lSyriac
         - label: Tagalog
-        - label: Tahitian
-        - label: Tajik
-        - label: Tamashek
+        #- label: Tahitian
+        #- label: Tajik
+        #- label: Tamashek
         - label: Tamil
-        - label: Tatar
-        - label: Telugu
-        - label: Tereno
-        - label: Tetum
+        #- label: Tatar
+        #- label: Telugu
+        #- label: Tereno
+        #- label: Tetum
         - label: Thai
-        - label: Tibetan
-        - label: Tigre
-        - label: Tigrinya
-        - label: Timne
-        - label: Tiv
-        - label: Tlingit
-        - label: TokPisin
-        - label: Tokelau
-        - label: TongaNyasa
-        - label: TongaIslands
-        - label: Tsimshian
-        - label: Tsonga
-        - label: Tswana
-        - label: Tumbuka
+        #- label: Tibetan
+        #- label: Tigre
+        #- label: Tigrinya
+        #- label: Timne
+        #- label: Tiv
+        #- label: Tlingit
+        #- label: Tok Pisin
+        #- label: Tokelau
+        #- label: Tonga Nyasa
+        #- label: Tonga Islands
+        #- label: Tsimshian
+        #- label: Tsonga
+        #- label: Tswana
+        #- label: Tumbuka
         - label: Turkish
-        - label: OttomanTurkish
-        - label: Turkmen
-        - label: Tuvalu
-        - label: Tuvinian
-        - label: Twi
-        - label: Udmurt
-        - label: Ugaritic
-        - label: Uighur
+        #- label: Ottoman Turkish
+        #- label: Turkmen
+        #- label: Tuvalu
+        #- label: Tuvinian
+        #- label: Twi
+        #- label: Udmurt
+        #- label: Ugaritic
+        #- label: Uighur
         - label: Ukrainian
-        - label: Umbundu
-        - label: UpperSorbian
-        - label: Urdu
-        - label: Uzbek
-        - label: Vai
-        - label: Venda
+        #- label: Umbundu
+        #- label: Upper Sorbian
+        #- label: Urdu
+        #- label: Uzbek
+        #- label: Vai
+        #- label: Venda
         - label: Vietnamese
-        - label: Volapuk
-        - label: Votic
-        - label: Walloon
-        - label: Waray
-        - label: Washo
+        #- label: Volapuk
+        #- label: Votic
+        #- label: Walloon
+        #- label: Waray
+        #- label: Washo
         - label: Welsh
-        - label: WesternFrisian
-        - label: Wolaitta
-        - label: Wolof
-        - label: Xhosa
-        - label: Yakut
-        - label: Yao
-        - label: Yapese
-        - label: Yiddish
-        - label: Yoruba
-        - label: Zapotec
-        - label: Zaza
-        - label: Zenaga
-        - label: Zhuang
-        - label: Zulu
-        - label: Zuni
+        #- label: Western Frisian
+        #- label: Wolaitta
+        #- label: Wolof
+        #- label: Xhosa
+        #- label: Yakut
+        #- label: Yao
+        #- label: Yapese
+        #- label: Yiddish
+        #- label: Yoruba
+        #- label: Zapotec
+        #- label: Zaza
+        #- label: Zenaga
+        #- label: Zhuang
+        #- label: Zulu
+        #- label: Zuni
   # Skip d_languages_selection - PSX/PS2 only
   - type: input
     id: d_serial
