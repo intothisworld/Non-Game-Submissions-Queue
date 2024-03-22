@@ -798,6 +798,10 @@ body:
     id: d_barcode
     attributes:
       label: Barcode
+  - type: markdown
+    attributes:
+      value: ---
+
   - type: input
     id: d_date
     attributes:
