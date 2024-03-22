@@ -839,23 +839,23 @@ body:
   - type: input
     id: d_ring_0_ma1
     attributes:
-      label: Mastering Ring
+      label: Mastering Code (laser branded/etched)
   - type: input
     id: d_ring_0_ma1_sid
     attributes:
-      label: Mastering SID
+      label: Mastering SID Code
   - type: input
     id: d_ring_0_ts1
     attributes:
-      label: Mastering Code / Toolstamp
+      label: Toolstamp or Mastering Code (engraved/stamped)
   - type: input
     id: d_ring_0_mo1_sid
     attributes:
-      label: Mould SID
+      label: Mould SID Code
   - type: input
     id: d_ring_0_mo1
     attributes:
-      label: Additional Mould
+      label: Additional Mould Text
 
   - type: markdown
     attributes:
@@ -863,23 +863,23 @@ body:
   - type: input
     id: d_ring_0_ma2
     attributes:
-      label: Mastering Ring
+      label: Mastering Code (laser branded/etched)
   - type: input
     id: d_ring_0_ma2_sid
     attributes:
-      label: Mastering SID
+      label: Mastering SID Code
   - type: input
     id: d_ring_0_ts2
     attributes:
-      label: Mastering Code / Toolstamp
+      label: Toolstamp or Mastering Code (engraved/stamped)
   - type: input
     id: d_ring_0_mo2_sid
     attributes:
-      label: Mould SID
+      label: Mould SID Code
   - type: input
     id: d_ring_0_mo2
     attributes:
-      label: Additional Mould
+      label: Additional Mould Text
 
   - type: markdown
     attributes:
@@ -887,15 +887,15 @@ body:
   - type: input
     id: d_ring_0_ma3
     attributes:
-      label: Mastering Ring
+      label: Mastering Code (laser branded/etched)
   - type: input
     id: d_ring_0_ma3_sid
     attributes:
-      label: Mastering SID
+      label: Mastering SID Code
   - type: input
     id: d_ring_0_ts3
     attributes:
-      label: Mastering Code / Toolstamp
+      label: Toolstamp or Mastering Code (engraved/stamped)
 
   - type: markdown
     attributes:
@@ -903,15 +903,15 @@ body:
   - type: input
     id: d_ring_0_ma4
     attributes:
-      label: Mastering Ring
+      label: Mastering Code (laser branded/etched)
   - type: input
     id: d_ring_0_ma4_sid
     attributes:
-      label: Mastering SID
+      label: Mastering SID Code
   - type: input
     id: d_ring_0_ts4
     attributes:
-      label: Mastering Code / Toolstamp
+      label: Toolstamp or Mastering Code (engraved/stamped)
 
   # Skip d_ring_0_offsets - Unused in submission form
   # Skip d_ring_0_0_id - Unused in submission form
