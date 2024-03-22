@@ -1,0 +1,339 @@
+name: Verification
+description: Submit a verification for a disc that is already in the project
+labels: ["verification"]
+assignees: ["intothisworld"]
+title: "[VERIFICATION] PLACEHOLDER NAME"
+body:
+  # Common Disc Info
+  - type: input
+    id: d_existing
+    attributes:
+      label: Existing Entry URL
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "## Common Disc Info"
+  - type: dropdown
+    id: d_system
+    attributes:
+      label: System
+      options:
+        - Apple Macintosh
+        - Embedded Systems
+        - IBM PC Compatible
+        - Media - Audiobooks
+        - Media - Films
+        - Media - Music
+        - Media - Television
+        - Miscellaneous
+    validations:
+      required: true
+  - type: dropdown
+    id: d_media
+    attributes:
+      label: Media
+      options:
+        - CD-ROM
+        - CD-ROM - Audio CD
+        - CD-ROM - CD+G
+        - CD-ROM - Enhanced CD
+        - CD-ROM - HDCD
+        - CD-ROM - Movie CD
+        - CD-ROM - MP3 CD
+        - CD-ROM - Video CD
+        - BD-ROM
+        - BD-ROM - BD-Video
+        - DVD-ROM
+        - DVD-ROM - DVD-Audio
+        - DVD-ROM - DVD-Video
+        - HD-DVD
+        - Playbutton
+        - SACD
+        - Other (Specify in comments)
+    validations:
+      required: true
+  - type: input
+    id: d_title
+    attributes:
+      label: Title
+    validations:
+      required: true
+  - type: input
+    id: d_title_foreign
+    attributes:
+      label: Foreign Title (Non-Latin)
+  - type: input
+    id: d_number
+    attributes:
+      label: Disc Number/Letter
+  - type: input
+    id: d_label
+    attributes:
+      label: Disc Title
+  - type: dropdown
+    id: d_category
+    attributes:
+      label: Category
+      options:
+        - Anime
+        - Audiobooks
+        - Comedy
+        - Device Drivers & Utilities
+        - Documentaries
+        - Documentaries - Conspiracy
+        - Educational
+        - General
+        - Instructional
+        - Karaoke
+        - Multimedia
+        - Operating Systems
+        - Promotional
+        - Software - Applications
+        - Software - Coverdiscs
+        - Soundtracks
+        - Soundtracks - Anime
+        - Soundtracks - Anime - Unofficial
+        - Soundtracks - Film
+        - Soundtracks - Game - Unofficial
+        - Soundtracks - Television
+    validations:
+      required: true
+  - type: input
+    id: d_region # Make into `checkboxes`
+    attributes:
+      label: Region
+  - type: input
+    id: d_languages # Make into `checkboxes`
+    attributes:
+      label: Languages
+  # Skip d_languages_selection - PSX/PS2 only
+  - type: input
+    id: d_serial
+    attributes:
+      label: Serial
+  # Skip d_ring - Unused in submission form
+  # Skip d_ring_0_id - Unused in submission form
+  - type: input
+    id: d_ring_0_ma1
+    attributes:
+      label: Layer 0 Mastering Ring
+  - type: input
+    id: d_ring_0_ma1_sid
+    attributes:
+      label: Layer 0 Mastering SID
+  - type: input
+    id: d_ring_0_ts1
+    attributes:
+      label: Layer 0 Mastering Code
+  - type: input
+    id: d_ring_0_mo1_sid
+    attributes:
+      label: Layer 0 Mould SID
+  - type: input
+    id: d_ring_0_mo1
+    attributes:
+      label: Layer 0 Additional Mould
+  - type: input
+    id: d_ring_0_ma2
+    attributes:
+      label: Layer 1 Mastering Ring
+  - type: input
+    id: d_ring_0_ma2_sid
+    attributes:
+      label: Layer 1 Mastering SID
+  - type: input
+    id: d_ring_0_ts2
+    attributes:
+      label: Layer 1 Mastering Code
+  - type: input
+    id: d_ring_0_mo2_sid
+    attributes:
+      label: Layer 1 Mould SID
+  - type: input
+    id: d_ring_0_mo2
+    attributes:
+      label: Layer 1 Additional Mould
+  - type: input
+    id: d_ring_0_ma3
+    attributes:
+      label: Layer 2 Mastering Ring
+  - type: input
+    id: d_ring_0_ma3_sid
+    attributes:
+      label: Layer 2 Mastering SID
+  - type: input
+    id: d_ring_0_ts3
+    attributes:
+      label: Layer 2 Mastering Code
+  - type: input
+    id: d_ring_0_ma4
+    attributes:
+      label: Layer 3 Mastering Ring
+  - type: input
+    id: d_ring_0_ma4_sid
+    attributes:
+      label: Layer 3 Mastering SID
+  - type: input
+    id: d_ring_0_ts4
+    attributes:
+      label: Layer 3 Mastering Code
+  # Skip d_ring_0_offsets - Unused in submission form
+  # Skip d_ring_0_0_id - Unused in submission form
+  # Skip d_ring_0_0_density - Unused in submission form
+  # Skip d_ring_0_0_value - Unused in submission form
+  # Skip d_ring_count - Unused in submission form
+  - type: input
+    id: d_barcode
+    attributes:
+      label: Barcode
+  - type: input
+    id: d_date
+    attributes:
+      label: EXE Date (yyyy-MM-dd)
+  - type: input
+    id: d_errors
+    attributes:
+      label: Errors Count
+    validations:
+      required: true
+  - type: textarea
+    id: d_comments
+    attributes:
+      label: Comments
+  - type: textarea
+    id: d_contents
+    attributes:
+      label: Contents
+
+  # Version and Editions
+  - type: markdown
+    attributes:
+      value: "## Version and Editions"
+  - type: input
+    id: d_version
+    attributes:
+      label: Version
+  - type: input
+    id: d_editions
+    attributes:
+      label: Edition
+
+  # EDC
+  # Skip d_edc - PSX only
+
+  # Parent/Clone Relationship
+  - type: markdown
+    attributes:
+      value: "## Parent/Clone Relationship"
+  - type: input
+    id: d_parent_id
+    attributes:
+      label: Parent ID
+  # Skip d_is_regional_parent - Unused in submission form
+
+  # Extras
+  - type: markdown
+    attributes:
+      value: "## Extras"
+  - type: textarea
+    id: d_pvd
+    attributes:
+      label: Primary Volume Descriptor (PVD) (ISO9660 FS only)
+  # Skip d_d1_key - Systems with keys only
+  # Skip d_d2_key - Systems with keys only
+  - type: textarea
+    id: d_pic_data
+    attributes:
+      label: Permanent Information & Control (PIC)
+  - type: textarea
+    id: d_header
+    attributes:
+      label: Header
+  # Skip d_ssranges - XGD only
+
+  # Copy Protection
+  - type: markdown
+    attributes:
+      value: "## Copy Protection"
+  # Skip d_protection_a - PSX/PS2 only
+  # Skip d_protection_1 - PSX/PS2 only
+  # Skip d_libcrypt - PSX/PS2 only
+  - type: textarea
+    id: d_protection
+    attributes:
+      label: Protection
+  - type: textarea
+    id: d_securom
+    attributes:
+      label: SecuROM Data
+
+  # Dumpers and Status
+  # Skip d_status - Unused in submission form
+  # Skip d_dumpers - Unused in submission form
+  # Skip d_dumpers_text - Unused in submission form
+
+  # Tracks and Write Offsets
+  - type: markdown
+    attributes:
+      value: "## Tracks and Write Offsets (CD only)"
+  - type: textarea
+    id: d_tracks
+    attributes:
+      label: ClrMamePro Data (Track Hashes)
+  - type: textarea
+    id: d_cue
+    attributes:
+      label: Cuesheet
+  # Skip d_offset - Unused in submission form
+  - type: input
+    id: d_offset_text
+    attributes:
+      label: Write Offset
+
+  # Tracks and Write Offsets
+  - type: markdown
+    attributes:
+      value: "## Sizes and Checksums (DVD, HD-DVD, BD, SACD)"
+  - type: input
+    id: d_layerbreak
+    attributes:
+      label: Layerbreak 1
+  - type: input
+    id: d_layerbreak_2
+    attributes:
+      label: Layerbreak 2
+  - type: input
+    id: d_layerbreak_3
+    attributes:
+      label: Layerbreak 3
+  - type: textarea
+    id: d_pic_identifier
+    attributes:
+      label: Permanent Information & Control (PIC)
+  - type: input
+    id: d_size
+    attributes:
+      label: Size
+  - type: input
+    id: d_crc32
+    attributes:
+      label: CRC-32
+  - type: input
+    id: d_md5
+    attributes:
+      label: MD5
+  - type: input
+    id: d_sha1
+    attributes:
+      label: SHA-1
+
+  # Dumping Info
+  - type: markdown
+    attributes:
+      value: "## Dumping Info"
+  - type: textarea
+    id: Dumping_Info
+    attributes:
+      label: Dumping Info
+      description: Full contents of the dumping info section

@@ -1,0 +1,18 @@
+name: Fixes
+description: Submit a fix for a disc that is already in the project
+labels: ["fix"]
+assignees: ["intothisworld"]
+title: "[FIX] PLACEHOLDER NAME"
+body:
+  - type: input
+    id: d_existing
+    attributes:
+      label: Existing Entry URL
+    validations:
+      required: true
+  
+  - type: textarea
+    id: Description
+    attributes:
+      label: Description
+      description: Description of the requested fixes
