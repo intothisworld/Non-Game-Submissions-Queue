@@ -5,15 +5,15 @@ assignees: ["intothisworld"]
 title: "[VERIFICATION] PLACEHOLDER NAME"
 body:
   # Common Disc Info
+  - type: markdown
+    attributes:
+      value: "## Common Disc Info"
   - type: input
     id: d_existing
     attributes:
       label: Existing Entry URL
     validations:
       required: true
-  - type: markdown
-    attributes:
-      value: "## Common Disc Info"
   - type: dropdown
     id: d_system
     attributes:
@@ -112,77 +112,6 @@ body:
     id: d_serial
     attributes:
       label: Serial
-  # Skip d_ring - Unused in submission form
-  # Skip d_ring_0_id - Unused in submission form
-  - type: input
-    id: d_ring_0_ma1
-    attributes:
-      label: Layer 0 Mastering Ring
-  - type: input
-    id: d_ring_0_ma1_sid
-    attributes:
-      label: Layer 0 Mastering SID
-  - type: input
-    id: d_ring_0_ts1
-    attributes:
-      label: Layer 0 Mastering Code
-  - type: input
-    id: d_ring_0_mo1_sid
-    attributes:
-      label: Layer 0 Mould SID
-  - type: input
-    id: d_ring_0_mo1
-    attributes:
-      label: Layer 0 Additional Mould
-  - type: input
-    id: d_ring_0_ma2
-    attributes:
-      label: Layer 1 Mastering Ring
-  - type: input
-    id: d_ring_0_ma2_sid
-    attributes:
-      label: Layer 1 Mastering SID
-  - type: input
-    id: d_ring_0_ts2
-    attributes:
-      label: Layer 1 Mastering Code
-  - type: input
-    id: d_ring_0_mo2_sid
-    attributes:
-      label: Layer 1 Mould SID
-  - type: input
-    id: d_ring_0_mo2
-    attributes:
-      label: Layer 1 Additional Mould
-  - type: input
-    id: d_ring_0_ma3
-    attributes:
-      label: Layer 2 Mastering Ring
-  - type: input
-    id: d_ring_0_ma3_sid
-    attributes:
-      label: Layer 2 Mastering SID
-  - type: input
-    id: d_ring_0_ts3
-    attributes:
-      label: Layer 2 Mastering Code
-  - type: input
-    id: d_ring_0_ma4
-    attributes:
-      label: Layer 3 Mastering Ring
-  - type: input
-    id: d_ring_0_ma4_sid
-    attributes:
-      label: Layer 3 Mastering SID
-  - type: input
-    id: d_ring_0_ts4
-    attributes:
-      label: Layer 3 Mastering Code
-  # Skip d_ring_0_offsets - Unused in submission form
-  # Skip d_ring_0_0_id - Unused in submission form
-  # Skip d_ring_0_0_density - Unused in submission form
-  # Skip d_ring_0_0_value - Unused in submission form
-  # Skip d_ring_count - Unused in submission form
   - type: input
     id: d_barcode
     attributes:
@@ -205,6 +134,98 @@ body:
     id: d_contents
     attributes:
       label: Contents
+
+  - type: markdown
+    attributes:
+      value: "## Ringcode Information"
+  # Skip d_ring - Unused in submission form
+  # Skip d_ring_0_id - Unused in submission form
+
+  - type: markdown
+    attributes:
+      value: "### Layer 0 / Data Side"
+  - type: input
+    id: d_ring_0_ma1
+    attributes:
+      label: Mastering Ring
+  - type: input
+    id: d_ring_0_ma1_sid
+    attributes:
+      label: Mastering SID
+  - type: input
+    id: d_ring_0_ts1
+    attributes:
+      label: Mastering Code
+  - type: input
+    id: d_ring_0_mo1_sid
+    attributes:
+      label: Mould SID
+  - type: input
+    id: d_ring_0_mo1
+    attributes:
+      label: Additional Mould
+
+  - type: markdown
+    attributes:
+      value: "### Layer 1 / Label Side"
+  - type: input
+    id: d_ring_0_ma2
+    attributes:
+      label: Mastering Ring
+  - type: input
+    id: d_ring_0_ma2_sid
+    attributes:
+      label: Mastering SID
+  - type: input
+    id: d_ring_0_ts2
+    attributes:
+      label: Mastering Code
+  - type: input
+    id: d_ring_0_mo2_sid
+    attributes:
+      label: Mould SID
+  - type: input
+    id: d_ring_0_mo2
+    attributes:
+      label: Additional Mould
+
+  - type: markdown
+    attributes:
+      value: "### Layer 2"
+  - type: input
+    id: d_ring_0_ma3
+    attributes:
+      label: Mastering Ring
+  - type: input
+    id: d_ring_0_ma3_sid
+    attributes:
+      label: Mastering SID
+  - type: input
+    id: d_ring_0_ts3
+    attributes:
+      label: Mastering Code
+
+  - type: markdown
+    attributes:
+      value: "### Layer 3"
+  - type: input
+    id: d_ring_0_ma4
+    attributes:
+      label: Mastering Ring
+  - type: input
+    id: d_ring_0_ma4_sid
+    attributes:
+      label: Mastering SID
+  - type: input
+    id: d_ring_0_ts4
+    attributes:
+      label: Mastering Code
+
+  # Skip d_ring_0_offsets - Unused in submission form
+  # Skip d_ring_0_0_id - Unused in submission form
+  # Skip d_ring_0_0_density - Unused in submission form
+  # Skip d_ring_0_0_value - Unused in submission form
+  # Skip d_ring_count - Unused in submission form
 
   # Version and Editions
   - type: markdown
