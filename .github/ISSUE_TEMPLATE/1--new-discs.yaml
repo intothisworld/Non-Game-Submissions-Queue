@@ -53,11 +53,6 @@ body:
       label: Title
     validations:
       required: true
-  - type: markdown
-    attributes:
-      value: |
-        <details>
-        <summary>Additional Title Fields</summary>
   - type: input
     id: d_title_foreign
     attributes:
@@ -70,10 +65,6 @@ body:
     id: d_label
     attributes:
       label: Disc Title
-  - type: markdown
-    attributes:
-      value: |
-        </details>
   - type: dropdown
     id: d_category
     attributes:
