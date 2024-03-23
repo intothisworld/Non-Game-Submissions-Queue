@@ -9,21 +9,6 @@ body:
     attributes:
       value: "## Common Disc Info"
   - type: dropdown
-    id: d_system
-    attributes:
-      label: System
-      options:
-        - Apple Macintosh
-        - Embedded Systems
-        - IBM PC Compatible
-        - Media - Audiobooks
-        - Media - Films
-        - Media - Music
-        - Media - Television
-        - Miscellaneous
-    validations:
-      required: true
-  - type: dropdown
     id: d_media
     attributes:
       label: Media
@@ -47,52 +32,32 @@ body:
         - Other (Specify in comments)
     validations:
       required: true
+
   - type: input
-    id: d_title
+    id: d_title_source
     attributes:
-      label: Title
+      label: Source Title
     validations:
       required: true
   - type: input
-    id: d_title_foreign
+    id: d_title_additional
     attributes:
-      label: Foreign Title (Non-Latin)
+      label: Source Title (Additional)
+  - type: input
+    id: d_title_romanized
+    attributes:
+      label: Romanized Title
+  - type: input
+    id: d_title_colloquial
+    attributes:
+      label: Unofficial/Colloquial Title
+
   - type: input
     id: d_number
     attributes:
-      label: Disc Number/Letter
-  - type: input
-    id: d_label
-    attributes:
-      label: Disc Title
-  - type: dropdown
-    id: d_category
-    attributes:
-      label: Category
-      options:
-        - Anime
-        - Audiobooks
-        - Comedy
-        - Device Drivers & Utilities
-        - Documentaries
-        - Documentaries - Conspiracy
-        - Educational
-        - General
-        - Instructional
-        - Karaoke
-        - Multimedia
-        - Operating Systems
-        - Promotional
-        - Software - Applications
-        - Software - Coverdiscs
-        - Soundtracks
-        - Soundtracks - Anime
-        - Soundtracks - Anime - Unofficial
-        - Soundtracks - Film
-        - Soundtracks - Game - Unofficial
-        - Soundtracks - Television
-    validations:
-      required: true
+      label: Disc /# - Disc Title
+      placeholder: 'ex: "CD2 - Outtakes"'
+
   - type: dropdown
     id: d_region
     attributes:
@@ -790,14 +755,18 @@ body:
         #- label: Zulu
         #- label: Zuni
   # Skip d_languages_selection - PSX/PS2 only
+
   - type: input
     id: d_serial
     attributes:
-      label: Serial
+      label: Disc Serial
+      description: |
+        Only serials present on disc label. If multiple, separate with semicolon.
   - type: input
     id: d_barcode
     attributes:
       label: Barcode
+
   - type: markdown
     attributes:
       value: ---
@@ -812,6 +781,132 @@ body:
       label: Errors Count
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: "## Category Tags"
+  - type: dropdown
+    id: d_categories_content
+    attributes:
+      label: Content Type
+      multiple: true
+      options:
+        - Audio
+        - Documents
+        - Software
+        - Video
+    validations:
+      required: true
+  - type: dropdown
+    id: d_categories_audio
+    attributes:
+      label: Primary Categories (Audio Only)
+      multiple: true
+      options:
+        - Ambience
+        - Audiobooks
+        - Comedy
+        - Drama
+        - Instructional
+        - Music
+        - Radio
+        - Sound Effects
+        - Soundtracks
+        - Spoken
+        - Other (Specify in comments)
+  - type: dropdown
+    id: d_categories_video
+    attributes:
+      label: Primary Categories (Video Only)
+      multiple: true
+      options:
+        - Ambience
+        - Comedy
+        - Documentaries
+        - Drama
+        - Films
+        - Instructional
+        - Music
+        - Promotional
+        - Spoken
+        - Sports
+        - Television
+        - Other (Specify in comments)
+  - type: dropdown
+    id: d_categories_software
+    attributes:
+      label: Primary Categories (Software Only)
+      multiple: true
+      options:
+        - ----Platforms----
+        - Linux(x86)
+        - Mac(m68k)
+        - Mac(PowerPC)
+        - Mac(x86)
+        - Mac(ARM)
+        - Win(x86)
+        - Other (Specify in 'Technical')
+        - ----Categories----
+        - Applications
+        - Drivers
+        - Educational
+        - Multimedia
+        - Operating Systems
+        - Promotional
+        - Utilities
+        - Other (Specify in comments)
+  - type: dropdown
+    id: d_categories_special
+    attributes:
+      label: Special Interest Tags
+      multiple: true
+      options:
+        - Animation
+        - Art
+        - Automotive
+        - Business & Finance
+        - Comedy
+        - Comics
+        - Computing
+        - Creative Resources
+        - Drama
+        - Educational
+        - Films
+        - Fitness
+        - Games
+        - History
+        - Languages
+        - Literature
+        - Music
+        - Periodicals
+        - Philosophy & Religion
+        - Politics
+        - Radio
+        - Self-Improvement
+        - Sports
+        - Television
+        - Other (Specify in comments)
+        - None of the above
+    validations:
+      required: True
+  - type: dropdown
+    id: d_categories_release
+    attributes:
+      label: Release Context
+      multiple: true
+      options:
+        - Bonus Discs
+        - Covermounts
+        - Promotional
+        - Unofficial
+        - Other (Specify in comments)
+        - None of the above
+    validations:
+      required: True
+
+  - type: markdown
+    attributes:
+      value: Additional General Info
   - type: textarea
     id: d_comments
     attributes:
@@ -820,6 +915,20 @@ body:
     id: d_contents
     attributes:
       label: Contents
+  - type: textarea
+    id: d_technical
+    attributes:
+      label: Technical
+      description: Use varies my media type.
+      placeholder: |
+        Use for things like DVD/Blu-ray regions, aspect ratios, and audio
+        options; software compatibility (architectures, OS's, and bit widths);
+        and noting special media properties such as MQA-CD encoding,
+        double-sided discs, CD/DVD-R's, and similar.
+
+  - type: markdown
+    attributes:
+      value: ---
 
   - type: markdown
     attributes:
@@ -913,31 +1022,37 @@ body:
   # Skip d_ring_0_0_value - Unused in submission form
   # Skip d_ring_count - Unused in submission form
 
+  - type: markdown
+    attributes:
+      value: ---
+
   # Version and Editions
   - type: markdown
     attributes:
-      value: "## Version and Editions"
+      value: "## Bundle / Edition / Version"
   - type: input
-    id: d_version
+    id: d_bundle
     attributes:
-      label: Version
+      label: Bundle
+      placeholder: "ex: Collector's Boxset, BD Combo Pack, etc."
+      value: Standalone
   - type: input
     id: d_editions
     attributes:
       label: Edition
+      placeholder: "ex: 2017 Remaster, 30th Anniversary Edition, etc."
+  - type: input
+    id: d_version
+    attributes:
+      label: Version
+      placeholder: "ex: v1.02"
+
+  - type: markdown
+    attributes:
+      value: ---
 
   # EDC
   # Skip d_edc - PSX only
-
-  # Parent/Clone Relationship
-  - type: markdown
-    attributes:
-      value: "## Parent/Clone Relationship"
-  - type: input
-    id: d_parent_id
-    attributes:
-      label: Parent ID
-  # Skip d_is_regional_parent - Unused in submission form
 
   # Extras
   - type: markdown
@@ -1014,10 +1129,6 @@ body:
     id: d_layerbreak_3
     attributes:
       label: Layerbreak 3
-  - type: textarea
-    id: d_pic_identifier
-    attributes:
-      label: Permanent Information & Control (PIC)
   - type: input
     id: d_size
     attributes:
