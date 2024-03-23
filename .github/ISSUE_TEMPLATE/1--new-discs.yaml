@@ -31,7 +31,7 @@ body:
       value: "##### Header 5 Test"
   - type: markdown
     attributes:
-      value: " "
+      value: "‏‏‎ ‎"
   - type: markdown
     attributes:
       value: "####### Header 6? Test"
@@ -78,12 +78,12 @@ body:
   - type: input
     id: d_title_romanized
     attributes:
-      label: " "
+      label: "‏‏‎ ‎"
       description: Romanized Title
   - type: input
     id: d_title_colloquial
     attributes:
-      label: " "
+      label: "‏‏‎ ‎"
 
   - type: dropdown
     id: d_region
