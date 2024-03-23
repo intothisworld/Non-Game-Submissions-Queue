@@ -4,39 +4,6 @@ labels: ["newdisc"]
 assignees: ["intothisworld"]
 title: "[NEW] PLACEHOLDER NAME"
 body:
-
-  - type: markdown
-    attributes:
-      value: "# Header 1 Test"
-  - type: markdown
-    attributes:
-      value: "## Header 2 Test"
-  - type: markdown
-    attributes:
-      value: "\\"
-  - type: markdown
-    attributes:
-      value: "### Header 3 Test"
-  - type: markdown
-    attributes:
-      value: "<br />"
-  - type: markdown
-    attributes:
-      value: "#### Header 4 Test"
-  - type: markdown
-    attributes:
-      value: "<br>"
-  - type: markdown
-    attributes:
-      value: "##### Header 5 Test"
-  - type: markdown
-    attributes:
-      value: "‏‏‎ ‎"
-  - type: markdown
-    attributes:
-      value: "####### Header 6? Test"
-
-
   # Common Disc Info
   - type: markdown
     attributes:
@@ -62,8 +29,13 @@ body:
         - Playbutton
         - SACD
         - Other (Specify in comments)
+      default: 0
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: "<br>"
 
   - type: input
     id: d_title_source
@@ -71,19 +43,6 @@ body:
       label: Source Title(s)
     validations:
       required: true
-  - type: input
-    id: d_title_additional
-    attributes:
-      label: "#### Source Title (Additional)"
-  - type: input
-    id: d_title_romanized
-    attributes:
-      label: "‏‏‎ ‎"
-      description: Romanized Title
-  - type: input
-    id: d_title_colloquial
-    attributes:
-      label: "‏‏‎ ‎"
 
   - type: dropdown
     id: d_region
@@ -363,7 +322,7 @@ body:
     id: d_bundle
     attributes:
       label: Bundle
-      description: If none, put "Standalone". If unknown, put "Unknown".
+      description: A bundle is any multi-disc set. If none, put "Standalone". If unknown, put "Unknown".
       placeholder: "ex: Collector's Boxset, Blu-ray Combo Pack, DVD Bundle"
     validations:
       required: true
@@ -385,6 +344,7 @@ body:
     id: d_collection
     attributes:
       label: Collections
+      description: If multiple, separate with a semicolon.
       placeholder: "ex: Criterion Collection, New Line Platinum Series, Disney's Diamond Collection"
 
   - type: input
@@ -392,8 +352,10 @@ body:
     attributes:
       label: Package Serials
       description: |
-        Only input serials present on or as part of packaging. Don't include disc serials. If multiple, separate with a semicolon.
+        Only input serials present on or within packaging. Don't include disc serials. If multiple, separate with a semicolon.
         If none, put "NULL". If unknown, put "Unknown".
+    validations:
+      required: True
   - type: input
     id: d_barcodes_package
     attributes:
@@ -401,18 +363,24 @@ body:
       description: |
         If multiple, separate with a semicolon.
         If none, put "NULL". If unknown, put "Unknown".
+    validations:
+      required: True
 
   - type: input
     id: d_disc_label
     attributes:
       label: "Disc Number - Disc Title"
       description: Please match how it appears on the release.
-      placeholder: 'ex: "Disc 1 - Film", "CD2 - Outtakes & Rarities", "Widescreen Disc", etc.'
+      placeholder: "ex: 'Disc 1 - Film', 'CD2 - Outtakes & Rarities', 'Widescreen Disc'"
+    validations:
+      required: True
   - type: input
     id: d_serials_disc
     attributes:
       label: Disc Serials
-      description: Only input serials present on the disc label. If multiple, separate with a semicolon.
+      description: Only input serials present on the disc label. If multiple, separate with a semicolon. If none, put "NULL".
+    validations:
+      required: True
 
   - type: dropdown
     id: d_languages
@@ -863,9 +831,10 @@ body:
   - type: dropdown
     id: d_categories_audio
     attributes:
-      label: Primary Categories (Audio Only)
+      label: Primary Categories
       multiple: true
       options:
+        - --FOR AUDIO ONLY--
         - Ambience
         - Audiobooks
         - Comedy
@@ -877,12 +846,14 @@ body:
         - Soundtracks
         - Spoken
         - Other (Specify in comments)
+      default: 1
   - type: dropdown
     id: d_categories_video
     attributes:
-      label: Primary Categories (Video Only)
+      label: ‏‏‎ ‎
       multiple: true
       options:
+        - --FOR VIDEO ONLY--
         - Ambience
         - Comedy
         - Documentaries
@@ -895,20 +866,22 @@ body:
         - Sports
         - Television
         - Other (Specify in comments)
+      default: 1
   - type: dropdown
     id: d_categories_software
     attributes:
-      label: Primary Categories (Software Only)
+      label: ‏‏‎ ‎
       multiple: true
       options:
+        - --FOR SOFTWARE ONLY--
         - --- P L A T F O R M S ---
         - Embedded Systems
-        - Linux(x86)
-        - Mac(m68k)
-        - Mac(PowerPC)
-        - Mac(x86)
-        - Mac(ARM)
-        - Win(x86)
+        - Linux (x86)
+        - Mac (m68k)
+        - Mac (PowerPC)
+        - Mac (x86)
+        - Mac (ARM)
+        - Windows (x86)
         - Unknown
         - Other (Specify in 'Technical')
         - --- C A T E G O R I E S ---
@@ -920,6 +893,7 @@ body:
         - Promotional
         - Utilities
         - Other (Specify in comments)
+      default: 1
   - type: dropdown
     id: d_categories_special
     attributes:
@@ -964,7 +938,7 @@ body:
         - Covermounts
         - Promotional
         - Unofficial
-        - None of the above / Unknown
+        - None of the above, or unknown
         - Other (Specify in comments)
     validations:
       required: True
@@ -977,46 +951,54 @@ body:
     id: d_universal_hash
     attributes:
       label: Universal Hash (SHA-1)
+      value: " "
   - type: input
     id: d_data_start
     attributes:
       label: Non-zero data start
+      value: " "
 
   - type: textarea
     id: d_comments
     attributes:
       label: Comments
+      value: " "
   - type: textarea
     id: d_contents
     attributes:
       label: Contents
+      value: " "
   - type: textarea
     id: d_technical
     attributes:
       label: Technical
+      description: |
+        Filling in this information is not required, but encouraged. Due to inconsistencies in how technical details are listed on different releases, please simply transcribe the info as it appears on your release. We'll look at potentially standardizing all the terminology later.
+        Transcribing from the packaging is more than enough, but if you decide to go the extra mile and load up the disc to confirm, that's awesome and there is a field to indicate that you did so.
       value: |
-        (Due to inconsistencies in how technical details are listed on releases, please simply transcribe the info as it appears. We'll look at potentially standardizing all the terminology later.)
-        --For video formats--
-        Region Code: (Required, if indicated)
-        TV Format: [NTSC, PAL, SECAM] (Required, if indicated)
-        Aspect Ratio: (Required, if indicated)
-        Languages: (ex:
-          English  | Dolby Surround, DTS Surround | Subtitles (SDH)
-          French   | Dolby Digital                | No Subtitles
-          Spanish  | Dolby Digital                | No Subtitles
-          )
-        Closed Captioning (CC): [Yes, No, or Unknown]
+        ---For video formats---
+        Region Codes: (A,B,C,ABC,FREE,1,2,3,4,5,6,7,8,0,ALL)
+        TV Format: (NTSC, PAL, SECAM)
+        Aspect Ratio: (16:9, 4:3, Anamorphic Widescreen, Pan & Scan, etc.)
+        Audio Languages: (
+          English - DTS-HD MA 7.1, Dolby True HD 5.1, PCM 2.0
+          French  - Dolby Digital Mono, Dolby Digital 2.0
+          Spanish - Dolby Surround
+          etc.)
+        Subtitles: (English, English SDH, Japanese, Simplified Chinese, etc.)
+        Closed Captioning [CC]: (Yes, No, or Unknown)
+        Confirmed?: (Yes or No, or specify discrepancies)
 
-        --For software--
-        System Requirements: (Not required, but encouraged)
-        Confirmed via disc?: [Yes or No]
-      
-        Please also use for noting special media properties such as MQA-CD encoding, double-sided discs, CD/DVD-R's, and similar.
+        ---For software---
+        System Requirements: (Windows 95, 98, 2000; Mac OS X 10.6 or higher, etc.)
+        Confirmed?: (Yes or No, or specify discrepancies)
+      render: Text
 
   - type: input
     id: d_date
     attributes:
       label: EXE Date (yyyy-MM-dd)
+      value: " "
   - type: input
     id: d_errors
     attributes:
@@ -1028,6 +1010,12 @@ body:
   - type: markdown
     attributes:
       value: "## Ringcode Information"
+  - type: markdown
+    attributes:
+      value: |
+        Ringcode information is <b>required</b> for all submissions. Please check very carefully. Some ringcodes (particularly mould text), can be very difficult to read clearly or even see sometimes.
+        A magnifying glass can be very helpful here. And if you really want to be about as prepared as you can be for any difficulty of ringcode, a jeweler's loupe is absolutely the way to go.
+        The types with both 30x and 60x magnification are the best here, and you can usually find those for under $10 on Amazon.
   # Skip d_ring - Unused in submission form
   # Skip d_ring_0_id - Unused in submission form
   - type: markdown
@@ -1173,12 +1161,12 @@ body:
     id: d_tracks
     attributes:
       label: ClrMamePro Data (Track Hashes)
-      render: XML
+      render: xml
   - type: textarea
     id: d_cue
     attributes:
       label: Cuesheet
-      render: Cue Sheet
+      render: cue
   # Skip d_offset - Unused in submission form
   - type: input
     id: d_offset_text
@@ -1231,5 +1219,7 @@ body:
   - type: textarea
     id: attachments
     attributes:
-      label: Attachments (Logs + Photos/Scans)
+      label: Attachments (Logs & Photos/Scans)
       description: Please attach dump logs (mandatory). Photos/scans are not required, but are extremely helpful and highly encouraged.
+    validations:
+      required: true
