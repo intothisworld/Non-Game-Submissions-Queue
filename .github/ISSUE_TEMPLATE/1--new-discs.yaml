@@ -324,10 +324,6 @@ body:
         #- Zambia
         #- Zimbabwe
 
-  # Version and Editions
-  - type: markdown
-    attributes:
-      value: "## Bundle / Edition / Version"
   - type: input
     id: d_bundle
     attributes:
@@ -350,8 +346,8 @@ body:
     attributes:
       label: Collections
       description: |
-        "ex: Criterion Collection, New Line Platinum Series, Disney's Diamond
-        Collection"
+        ex: Criterion Collection, New Line Platinum Series, Disney's Diamond
+        Collection
 
   - type: input
     id: d_serials_package
@@ -361,7 +357,7 @@ body:
         Only input serials present on or within packaging. Don't include disc
         serials. If multiple, separate with a semicolon.
   - type: input
-    id: d_barcodes
+    id: d_barcodes_package
     attributes:
       label: Barcodes
       description: If multiple, separate with a semicolon.
@@ -369,8 +365,11 @@ body:
   - type: input
     id: d_disc_label
     attributes:
-      label: "Disc # - Disc Title"
-      placeholder: 'ex: "CD2 - Outtakes"'
+      label: "Disc Number - Disc Title"
+      description: |
+        Please match how it's formatted on the release.
+        'ex: "Disc 1 - Film", "CD2 - Outtakes & Rarities", "Widescreen Disc",
+        etc.'
   - type: input
     id: d_serials_disc
     attributes:
@@ -954,11 +953,19 @@ body:
       label: Technical
       description: |
         Use varies depending on media type.
-        DVD/Blu-ray: Region codes, aspect ratios, & audio options
-        Software: System requirements
-        Also for noting special media properties such as MQA-CD encoding,
-        double-sided discs, CD/DVD-R's, and similar.
+        - DVD/Blu-ray: Region codes, aspect ratios, & audio options
+        - Software: System requirements
+        - Please also use for noting special media properties such as MQA-CD
+        encoding, double-sided discs, CD/DVD-R's, and similar.
 
+  - type: input
+    id: d_universal_hash
+    attributes:
+      label: Universal Hash (SHA-1)
+  - type: input
+    id: d_data_start
+    attributes:
+      label: Non-zero data start
   - type: input
     id: d_date
     attributes:
@@ -1113,6 +1120,10 @@ body:
   # Skip d_status - Unused in submission form
   # Skip d_dumpers - Unused in submission form
   # Skip d_dumpers_text - Unused in submission form
+
+  - type: markdown
+    attributes:
+      value: ---
 
   # Tracks and Write Offsets
   - type: markdown
