@@ -951,23 +951,19 @@ body:
     id: d_universal_hash
     attributes:
       label: Universal Hash (SHA-1)
-      value: " "
   - type: input
     id: d_data_start
     attributes:
       label: Non-zero data start
-      value: " "
 
   - type: textarea
     id: d_comments
     attributes:
       label: Comments
-      value: " "
   - type: textarea
     id: d_contents
     attributes:
       label: Contents
-      value: " "
   - type: textarea
     id: d_technical
     attributes:
@@ -998,7 +994,6 @@ body:
     id: d_date
     attributes:
       label: EXE Date (yyyy-MM-dd)
-      value: " "
   - type: input
     id: d_errors
     attributes:
