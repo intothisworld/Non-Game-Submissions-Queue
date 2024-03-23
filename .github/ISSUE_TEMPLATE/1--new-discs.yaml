@@ -4,6 +4,39 @@ labels: ["newdisc"]
 assignees: ["intothisworld"]
 title: "[NEW] PLACEHOLDER NAME"
 body:
+
+  - type: markdown
+    attributes:
+      value: "# Header 1 Test"
+  - type: markdown
+    attributes:
+      value: "## Header 2 Test"
+  - type: markdown
+    attributes:
+      value: "\\"
+  - type: markdown
+    attributes:
+      value: "### Header 3 Test"
+  - type: markdown
+    attributes:
+      value: "<br />"
+  - type: markdown
+    attributes:
+      value: "#### Header 4 Test"
+  - type: markdown
+    attributes:
+      value: "<br>"
+  - type: markdown
+    attributes:
+      value: "##### Header 5 Test"
+  - type: markdown
+    attributes:
+      value: " "
+  - type: markdown
+    attributes:
+      value: "####### Header 6? Test"
+
+
   # Common Disc Info
   - type: markdown
     attributes:
@@ -17,7 +50,6 @@ body:
         - CD-ROM - Audio CD
         - CD-ROM - CD+G
         - CD-ROM - Enhanced CD
-        - CD-ROM - HDCD
         - CD-ROM - Movie CD
         - CD-ROM - MP3 CD
         - CD-ROM - Video CD
@@ -26,7 +58,7 @@ body:
         - DVD-ROM
         - DVD-ROM - DVD-Audio
         - DVD-ROM - DVD-Video
-        - HD-DVD
+        - HD DVD
         - Playbutton
         - SACD
         - Other (Specify in comments)
@@ -36,27 +68,30 @@ body:
   - type: input
     id: d_title_source
     attributes:
-      label: Source Title
+      label: Source Title(s)
     validations:
       required: true
   - type: input
     id: d_title_additional
     attributes:
-      label: Source Title (Additional)
+      label: "#### Source Title (Additional)"
   - type: input
     id: d_title_romanized
     attributes:
-      label: Romanized Title
+      label: " "
+      description: Romanized Title
   - type: input
     id: d_title_colloquial
     attributes:
-      label: Unofficial/Colloquial Title
+      label: " "
 
   - type: dropdown
     id: d_region
     attributes:
       label: Region
       options:
+        - Unknown
+        - Other (specify in comments)
         #- Afghanistan
         #- Aland Islands
         #- Albania
@@ -328,55 +363,56 @@ body:
     id: d_bundle
     attributes:
       label: Bundle
-      description: "ex: Collector's Boxset, BD Combo Pack, etc."
-      value: Standalone (Default)
+      description: If none, put "Standalone". If unknown, put "Unknown".
+      placeholder: "ex: Collector's Boxset, Blu-ray Combo Pack, DVD Bundle"
+    validations:
+      required: true
   - type: input
     id: d_editions
     attributes:
       label: Edition
-      description: "ex: 2017 Remaster, 30th Anniversary Edition, etc."
-      value: Standard (Default)
+      description: If none, put "Standard". If unknown, put "Unknown".
+      placeholder: "ex: 2017 Remaster, 30th Anniversary Edition"
+
+    validations:
+      required: true
   - type: input
     id: d_version
     attributes:
       label: Version
-      description: "ex: v1.02"
+      placeholder: "ex: v1.02"
   - type: input
     id: d_collection
     attributes:
       label: Collections
-      description: |
-        ex: Criterion Collection, New Line Platinum Series, Disney's Diamond
-        Collection
+      placeholder: "ex: Criterion Collection, New Line Platinum Series, Disney's Diamond Collection"
 
   - type: input
     id: d_serials_package
     attributes:
       label: Package Serials
       description: |
-        Only input serials present on or within packaging. Don't include disc
-        serials. If multiple, separate with a semicolon.
+        Only input serials present on or as part of packaging. Don't include disc serials. If multiple, separate with a semicolon.
+        If none, put "NULL". If unknown, put "Unknown".
   - type: input
     id: d_barcodes_package
     attributes:
       label: Barcodes
-      description: If multiple, separate with a semicolon.
+      description: |
+        If multiple, separate with a semicolon.
+        If none, put "NULL". If unknown, put "Unknown".
 
   - type: input
     id: d_disc_label
     attributes:
       label: "Disc Number - Disc Title"
-      description: |
-        Please match how it's formatted on the release.
-        'ex: "Disc 1 - Film", "CD2 - Outtakes & Rarities", "Widescreen Disc",
-        etc.'
+      description: Please match how it appears on the release.
+      placeholder: 'ex: "Disc 1 - Film", "CD2 - Outtakes & Rarities", "Widescreen Disc", etc.'
   - type: input
     id: d_serials_disc
     attributes:
       label: Disc Serials
-      description: |
-        Only input serials present on the disc label. If multiple, separate with
-        a semicolon.
+      description: Only input serials present on the disc label. If multiple, separate with a semicolon.
 
   - type: dropdown
     id: d_languages
@@ -384,6 +420,8 @@ body:
       label: Languages
       multiple: True
       options:
+        - Unknown
+        - Other (specify in comments)
         #- Abkhazian
         #- Achinese
         #- Acoli
@@ -806,10 +844,7 @@ body:
         #- Zuni
   # Skip d_languages_selection - PSX/PS2 only
 
-  - type: markdown
-    attributes:
-      value: ---
-
+  # Category Tags
   - type: markdown
     attributes:
       value: "## Category Tags"
@@ -866,15 +901,17 @@ body:
       label: Primary Categories (Software Only)
       multiple: true
       options:
-        - ----Platforms----
+        - --- P L A T F O R M S ---
+        - Embedded Systems
         - Linux(x86)
         - Mac(m68k)
         - Mac(PowerPC)
         - Mac(x86)
         - Mac(ARM)
         - Win(x86)
+        - Unknown
         - Other (Specify in 'Technical')
-        - ----Categories----
+        - --- C A T E G O R I E S ---
         - Applications
         - Drivers
         - Educational
@@ -927,18 +964,24 @@ body:
         - Covermounts
         - Promotional
         - Unofficial
-        - None of the above
+        - None of the above / Unknown
         - Other (Specify in comments)
     validations:
       required: True
 
-  - type: markdown
-    attributes:
-      value: ---
-
+  # Additional Common Info
   - type: markdown
     attributes:
       value: "## Additional Common Info"
+  - type: input
+    id: d_universal_hash
+    attributes:
+      label: Universal Hash (SHA-1)
+  - type: input
+    id: d_data_start
+    attributes:
+      label: Non-zero data start
+
   - type: textarea
     id: d_comments
     attributes:
@@ -951,21 +994,25 @@ body:
     id: d_technical
     attributes:
       label: Technical
-      description: |
-        Use varies depending on media type.
-        - DVD/Blu-ray: Region codes, aspect ratios, & audio options
-        - Software: System requirements
-        - Please also use for noting special media properties such as MQA-CD
-        encoding, double-sided discs, CD/DVD-R's, and similar.
+      value: |
+        (Due to inconsistencies in how technical details are listed on releases, please simply transcribe the info as it appears. We'll look at potentially standardizing all the terminology later.)
+        --For video formats--
+        Region Code: (Required, if indicated)
+        TV Format: [NTSC, PAL, SECAM] (Required, if indicated)
+        Aspect Ratio: (Required, if indicated)
+        Languages: (ex:
+          English  | Dolby Surround, DTS Surround | Subtitles (SDH)
+          French   | Dolby Digital                | No Subtitles
+          Spanish  | Dolby Digital                | No Subtitles
+          )
+        Closed Captioning (CC): [Yes, No, or Unknown]
 
-  - type: input
-    id: d_universal_hash
-    attributes:
-      label: Universal Hash (SHA-1)
-  - type: input
-    id: d_data_start
-    attributes:
-      label: Non-zero data start
+        --For software--
+        System Requirements: (Not required, but encouraged)
+        Confirmed via disc?: [Yes or No]
+      
+        Please also use for noting special media properties such as MQA-CD encoding, double-sided discs, CD/DVD-R's, and similar.
+
   - type: input
     id: d_date
     attributes:
@@ -977,16 +1024,12 @@ body:
     validations:
       required: true
 
-  - type: markdown
-    attributes:
-      value: ---
-
+  # Ringcode Information
   - type: markdown
     attributes:
       value: "## Ringcode Information"
   # Skip d_ring - Unused in submission form
   # Skip d_ring_0_id - Unused in submission form
-
   - type: markdown
     attributes:
       value: "### Layer 0 / Data Side"
@@ -1073,10 +1116,6 @@ body:
   # Skip d_ring_0_0_value - Unused in submission form
   # Skip d_ring_count - Unused in submission form
 
-  - type: markdown
-    attributes:
-      value: ---
-
   # EDC
   # Skip d_edc - PSX only
 
@@ -1088,16 +1127,19 @@ body:
     id: d_pvd
     attributes:
       label: Primary Volume Descriptor (PVD) (ISO9660 FS only)
+      render: Text
   # Skip d_d1_key - Systems with keys only
   # Skip d_d2_key - Systems with keys only
   - type: textarea
     id: d_pic_data
     attributes:
       label: Permanent Information & Control (PIC)
+      render: Text
   - type: textarea
     id: d_header
     attributes:
       label: Header
+      render: Text
   # Skip d_ssranges - XGD only
 
   # Copy Protection
@@ -1111,19 +1153,17 @@ body:
     id: d_protection
     attributes:
       label: Protection
+      render: Text
   - type: textarea
     id: d_securom
     attributes:
       label: SecuROM Data
+      render: Text
 
   # Dumpers and Status
   # Skip d_status - Unused in submission form
   # Skip d_dumpers - Unused in submission form
   # Skip d_dumpers_text - Unused in submission form
-
-  - type: markdown
-    attributes:
-      value: ---
 
   # Tracks and Write Offsets
   - type: markdown
@@ -1133,17 +1173,19 @@ body:
     id: d_tracks
     attributes:
       label: ClrMamePro Data (Track Hashes)
+      render: XML
   - type: textarea
     id: d_cue
     attributes:
       label: Cuesheet
+      render: Cue Sheet
   # Skip d_offset - Unused in submission form
   - type: input
     id: d_offset_text
     attributes:
       label: Write Offset
 
-  # Tracks and Write Offsets
+  # Sizes and Checksums
   - type: markdown
     attributes:
       value: "## Sizes and Checksums (DVD, HD-DVD, BD, SACD)"
@@ -1176,12 +1218,18 @@ body:
     attributes:
       label: SHA-1
 
-  # Dumping Info
+  # Dumping Info & Attachments
   - type: markdown
     attributes:
-      value: "## Dumping Info"
+      value: "## Dumping Info & Attachments"
   - type: textarea
     id: Dumping_Info
     attributes:
       label: Dumping Info
       description: Full contents of the dumping info section
+      render: Text
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments (Logs + Photos/Scans)
+      description: Please attach dump logs (mandatory). Photos/scans are not required, but are extremely helpful and highly encouraged.
