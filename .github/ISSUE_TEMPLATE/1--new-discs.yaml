@@ -13,6 +13,7 @@ body:
     attributes:
       label: Media
       options:
+        - Unspecified
         - CD-ROM
         - CD-ROM - Audio CD
         - CD-ROM - CD+G
@@ -55,8 +56,7 @@ body:
   - type: input
     id: d_title_colloquial
     attributes:
-      label: "-"
-      description: Unofficial/Colloquial Title
+      label: "Unofficial/Colloquial Title"
       value: "-"
 
   - type: markdown
@@ -343,38 +343,49 @@ body:
     attributes:
       value: "<br />"
 
+  - type: markdown
+    attributes:
+      value: "### Version and Editions"
   - type: input
     id: d_bundle
     attributes:
       label: Bundle
-      description: A bundle is any multi-disc set. If none, put "Standalone". If unknown, put "Unknown".
-      placeholder: "ex: Collector's Boxset, Blu-ray Combo Pack, DVD Bundle"
+      description: |
+        A bundle is any multi-disc set. If none, put "Standalone". If unknown, put "Unknown".
+        (ex: 'Collector's Boxset', 'Blu-ray Combo Pack', 'DVD Bundle', 'The Legend of Korra: The Complete Series' )
     validations:
       required: true
   - type: input
     id: d_editions
     attributes:
       label: Edition
-      description: If none, put "Standard". If unknown, put "Unknown".
-      placeholder: "ex: 2017 Remaster, 30th Anniversary Edition"
+      description: |
+        If none, put "Standard". If unknown, put "Unknown".
+        (ex: '2017 Remaster', '30th Anniversary Edition', 'Unrated Version')
     validations:
       required: true
   - type: input
     id: d_version
     attributes:
       label: Version
-      placeholder: "ex: v1.02"
+      description: "(ex: v1.02, Rev 1)"
+      value: "-"
   - type: input
     id: d_collection
     attributes:
       label: Collections
-      description: If multiple, separate with a semicolon.
-      placeholder: "ex: Criterion Collection, New Line Platinum Series, Disney's Diamond Collection"
+      description: |
+        If multiple, separate with a semicolon.
+        (ex: 'Criterion Collection', 'New Line Platinum Series', 'Disney's Diamond Collection')
+      value: "-"
 
   - type: markdown
     attributes:
       value: "<br />"
 
+  - type: markdown
+    attributes:
+      value: "### Package Information"
   - type: input
     id: d_serials_package
     attributes:
@@ -398,6 +409,9 @@ body:
     attributes:
       value: "<br />"
 
+  - type: markdown
+    attributes:
+      value: "### Disc Information"
   - type: input
     id: d_disc_label
     attributes:
@@ -878,11 +892,13 @@ body:
         - Video
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: "### Primary Categories"
   - type: dropdown
     id: d_categories_audio
     attributes:
-      label: Primary Categories
-      description: Audio Only
+      label: For Audio Only
       multiple: true
       options:
         - Ambience
@@ -900,8 +916,7 @@ body:
   - type: dropdown
     id: d_categories_video
     attributes:
-      label: "-"
-      description: Video Only
+      label: "For Video Only"
       multiple: true
       options:
         - Ambience
@@ -919,8 +934,7 @@ body:
   - type: dropdown
     id: d_categories_software
     attributes:
-      label: "-"
-      description: Software Only
+      label: "For Software Only"
       multiple: true
       options:
         - --- P L A T F O R M S ---
@@ -991,6 +1005,10 @@ body:
     validations:
       required: True
 
+  - type: markdown
+    attributes:
+      value: "<br />"
+
   # Additional Common Info
   - type: markdown
     attributes:
@@ -1050,6 +1068,10 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: "<br />"
+
   # Ringcode Information
   - type: markdown
     attributes:
@@ -1057,15 +1079,16 @@ body:
   - type: markdown
     attributes:
       value: |
-        Ringcode information is <b><i>required</i></b> for all submissions. Please check very carefully. Some ringcodes (particularly mould text), can be very difficult to read clearly or even see sometimes. A magnifying glass can be very helpful here. And if you really want to be about as prepared as you can be for any difficulty of ringcode, a jeweler's loupe is absolutely the way to go. The types with both 30x and 60x magnification are the most useful here, and you can usually find those for under $10 on Amazon.
+        (Ringcode information is <b><i>required</i></b> for all submissions. Please check very carefully. Some ringcodes (particularly mould text), can be very difficult to read clearly or even see sometimes. A magnifying glass can be very helpful here. And if you really want to be about as prepared as you can be for any difficulty of ringcode, a jeweler's loupe is absolutely the way to go. The types with both 30x and 60x magnification are the most useful here, and you can usually find those for under $10 on Amazon.)
   # Skip d_ring - Unused in submission form
   # Skip d_ring_0_id - Unused in submission form
   - type: markdown
     attributes:
-      value: "### Innermost Ring / Data Side"
+      value: |
+        ### Innermost Ring / Data Side
   - type: markdown
     attributes:
-      value: "##### (Note: The innermost ring usually correlates to layer 0, but not always.)"
+      value: "##### (Note: The innermost ring most often correlates to layer 0, but not always.)"
   - type: input
     id: d_ring_0_ma1
     attributes:
@@ -1096,7 +1119,7 @@ body:
       value: "### Second Innermost Ring / Label Side"
   - type: markdown
     attributes:
-      value: "##### (Note: The second innermost ring usually correlates to layer 1, but not always.)"
+      value: "##### (Note: The second innermost ring most often correlates to layer 1, but not always.)"
   - type: input
     id: d_ring_0_ma2
     attributes:
@@ -1127,7 +1150,7 @@ body:
       value: "### Third Innermost Ring"
   - type: markdown
     attributes:
-      value: "##### (Note: The third innermost ring usually correlates to layer 2, but not always.)"
+      value: "##### (Note: The third innermost ring most often correlates to layer 2, but not always.)"
   - type: input
     id: d_ring_0_ma3
     attributes:
@@ -1147,10 +1170,10 @@ body:
 
   - type: markdown
     attributes:
-      value: "### Outermost Ring"
+      value: "### Fourth Innermost Ring"
   - type: markdown
     attributes:
-      value: "##### (Note: The outermost ring usually correlates to layer 3, but not always.)"
+      value: "##### (Note: The fourth innermost ring most often correlates to layer 3, but not always.)"
   - type: input
     id: d_ring_0_ma4
     attributes:
@@ -1172,6 +1195,10 @@ body:
 
   # EDC
   # Skip d_edc - PSX only
+
+  - type: markdown
+    attributes:
+      value: "<br />"
 
   # Extras
   - type: markdown
@@ -1271,6 +1298,10 @@ body:
     id: d_sha1
     attributes:
       label: SHA-1
+
+  - type: markdown
+    attributes:
+      value: "<br />"
 
   # Dumping Info & Attachments
   - type: markdown
