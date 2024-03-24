@@ -29,20 +29,39 @@ body:
         - Playbutton
         - SACD
         - Other (Specify in comments)
-      default: 0
     validations:
       required: true
 
   - type: markdown
     attributes:
-      value: "<br>"
+      value: "<br />"
 
   - type: input
     id: d_title_source
     attributes:
-      label: Source Title(s)
+      label: Source Title
     validations:
       required: true
+  - type: input
+    id: d_title_additional
+    attributes:
+      label: Source Title (Additional)
+      value: 
+  - type: input
+    id: d_title_romanized
+    attributes:
+      label: Romanized Title
+      value: "-"
+  - type: input
+    id: d_title_colloquial
+    attributes:
+      label: 
+      description: Unofficial/Colloquial Title
+      value: "-"
+
+  - type: markdown
+    attributes:
+      value: "<br />"
 
   - type: dropdown
     id: d_region
@@ -317,6 +336,12 @@ body:
         #- Yugoslavia
         #- Zambia
         #- Zimbabwe
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "<br />"
 
   - type: input
     id: d_bundle
@@ -332,7 +357,6 @@ body:
       label: Edition
       description: If none, put "Standard". If unknown, put "Unknown".
       placeholder: "ex: 2017 Remaster, 30th Anniversary Edition"
-
     validations:
       required: true
   - type: input
@@ -340,12 +364,18 @@ body:
     attributes:
       label: Version
       placeholder: "ex: v1.02"
+      value: 
   - type: input
     id: d_collection
     attributes:
       label: Collections
       description: If multiple, separate with a semicolon.
       placeholder: "ex: Criterion Collection, New Line Platinum Series, Disney's Diamond Collection"
+      value: 
+
+  - type: markdown
+    attributes:
+      value: "<br />"
 
   - type: input
     id: d_serials_package
@@ -366,6 +396,10 @@ body:
     validations:
       required: True
 
+  - type: markdown
+    attributes:
+      value: "<br />"
+
   - type: input
     id: d_disc_label
     attributes:
@@ -381,6 +415,10 @@ body:
       description: Only input serials present on the disc label. If multiple, separate with a semicolon. If none, put "NULL".
     validations:
       required: True
+
+  - type: markdown
+    attributes:
+      value: "<br />"
 
   - type: dropdown
     id: d_languages
@@ -810,7 +848,21 @@ body:
         #- Zhuang
         #- Zulu
         #- Zuni
+    validations:
+      required: true
   # Skip d_languages_selection - PSX/PS2 only
+  - type: dropdown
+    attributes:
+      label: Checked languages?
+      options:
+        - No
+        - Yes
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "<br />"
 
   # Category Tags
   - type: markdown
@@ -832,9 +884,9 @@ body:
     id: d_categories_audio
     attributes:
       label: Primary Categories
+      description: Audio Only
       multiple: true
       options:
-        - --FOR AUDIO ONLY--
         - Ambience
         - Audiobooks
         - Comedy
@@ -850,10 +902,10 @@ body:
   - type: dropdown
     id: d_categories_video
     attributes:
-      label: ‏‏‎ ‎
+      label: 
+      description: Video Only
       multiple: true
       options:
-        - --FOR VIDEO ONLY--
         - Ambience
         - Comedy
         - Documentaries
@@ -866,14 +918,13 @@ body:
         - Sports
         - Television
         - Other (Specify in comments)
-      default: 1
   - type: dropdown
     id: d_categories_software
     attributes:
-      label: ‏‏‎ ‎
+      label: 
+      description: Software Only
       multiple: true
       options:
-        - --FOR SOFTWARE ONLY--
         - --- P L A T F O R M S ---
         - Embedded Systems
         - Linux (x86)
@@ -893,7 +944,6 @@ body:
         - Promotional
         - Utilities
         - Other (Specify in comments)
-      default: 1
   - type: dropdown
     id: d_categories_special
     attributes:
@@ -970,7 +1020,8 @@ body:
       label: Technical
       description: |
         Filling in this information is not required, but encouraged. Due to inconsistencies in how technical details are listed on different releases, please simply transcribe the info as it appears on your release. We'll look at potentially standardizing all the terminology later.
-        Transcribing from the packaging is more than enough, but if you decide to go the extra mile and load up the disc to confirm, that's awesome and there is a field to indicate that you did so.
+
+        Transcribing from the packaging is more than enough, but if you decide to go the extra mile and load up the disc contents to confirm, that is great and very appreciated and there is an extra field included here to indicate that you confirmed the technical details in this way.
       value: |
         ---For video formats---
         Region Codes: (A,B,C,ABC,FREE,1,2,3,4,5,6,7,8,0,ALL)
@@ -983,11 +1034,11 @@ body:
           etc.)
         Subtitles: (English, English SDH, Japanese, Simplified Chinese, etc.)
         Closed Captioning [CC]: (Yes, No, or Unknown)
-        Confirmed?: (Yes or No, or specify discrepancies)
+        Confirmed internally?: (Yes or No, or specify discrepancies)
 
         ---For software---
         System Requirements: (Windows 95, 98, 2000; Mac OS X 10.6 or higher, etc.)
-        Confirmed?: (Yes or No, or specify discrepancies)
+        Confirmed internally?: (Yes or No, or specify discrepancies)
       render: Text
 
   - type: input
@@ -1008,14 +1059,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        Ringcode information is <b>required</b> for all submissions. Please check very carefully. Some ringcodes (particularly mould text), can be very difficult to read clearly or even see sometimes.
-        A magnifying glass can be very helpful here. And if you really want to be about as prepared as you can be for any difficulty of ringcode, a jeweler's loupe is absolutely the way to go.
-        The types with both 30x and 60x magnification are the best here, and you can usually find those for under $10 on Amazon.
+        Ringcode information is <b><i>required</i></b> for all submissions. Please check very carefully. Some ringcodes (particularly mould text), can be very difficult to read clearly or even see sometimes. A magnifying glass can be very helpful here. And if you really want to be about as prepared as you can be for any difficulty of ringcode, a jeweler's loupe is absolutely the way to go. The types with both 30x and 60x magnification are the most useful here, and you can usually find those for under $10 on Amazon.
   # Skip d_ring - Unused in submission form
   # Skip d_ring_0_id - Unused in submission form
   - type: markdown
     attributes:
-      value: "### Layer 0 / Data Side"
+      value: "### Innermost Ring / Data Side"
+  - type: markdown
+    attributes:
+      value: "##### (Note: The innermost ring usually correlates to layer 0, but not always.)"
   - type: input
     id: d_ring_0_ma1
     attributes:
@@ -1039,7 +1091,14 @@ body:
 
   - type: markdown
     attributes:
-      value: "### Layer 1 / Label Side"
+      value: "<br />"
+
+  - type: markdown
+    attributes:
+      value: "### Second Innermost Ring / Label Side"
+  - type: markdown
+    attributes:
+      value: "##### (Note: The second innermost ring usually correlates to layer 1, but not always.)"
   - type: input
     id: d_ring_0_ma2
     attributes:
@@ -1063,7 +1122,14 @@ body:
 
   - type: markdown
     attributes:
-      value: "### Layer 2"
+      value: "<br />"
+
+  - type: markdown
+    attributes:
+      value: "### Third Innermost Ring"
+  - type: markdown
+    attributes:
+      value: "##### (Note: The third innermost ring usually correlates to layer 2, but not always.)"
   - type: input
     id: d_ring_0_ma3
     attributes:
@@ -1079,7 +1145,14 @@ body:
 
   - type: markdown
     attributes:
-      value: "### Layer 3"
+      value: "<br />"
+
+  - type: markdown
+    attributes:
+      value: "### Outermost Ring"
+  - type: markdown
+    attributes:
+      value: "##### (Note: The outermost ring usually correlates to layer 3, but not always.)"
   - type: input
     id: d_ring_0_ma4
     attributes:
