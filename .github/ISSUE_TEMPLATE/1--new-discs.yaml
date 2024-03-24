@@ -1050,8 +1050,10 @@ body:
         Filling in this information is not required, but encouraged. Due to inconsistencies in how technical details are listed on different releases, please simply transcribe the info as it appears on your release. We'll look at potentially standardizing all the terminology later.
 
         Transcribing from the packaging is more than enough, but if you decide to go the extra mile and load up the disc contents to confirm, that is great and very appreciated and there is an extra field included here to indicate that you confirmed the technical details in this way.
+
+        (Note: Values in parentheses below are just placeholders used for the examples. Please delete all parenthesized values and fill in with the correct information for your own media.)
       value: |
-        ---For video formats---
+        ---Example formatting for video discs---
         Region Codes: (A,B,C,ABC,FREE,1,2,3,4,5,6,7,8,0,ALL)
         TV Format: (NTSC, PAL, SECAM)
         Aspect Ratio: (16:9, 4:3, Anamorphic Widescreen, Pan & Scan, etc.)
@@ -1064,7 +1066,7 @@ body:
         Closed Captioning [CC]: (Yes, No, or Unknown)
         Confirmed internally?: (Yes or No, or specify discrepancies)
 
-        ---For software---
+        ---Example formatting for software discs---
         System Requirements: (Windows 95, 98, 2000; Mac OS X 10.6 or higher, etc.)
         Confirmed internally?: (Yes or No, or specify discrepancies)
       render: Text
