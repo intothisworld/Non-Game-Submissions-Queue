@@ -853,8 +853,8 @@ body:
     attributes:
       label: Checked languages?
       options:
-        - No
-        - Yes
+        - "No"
+        - "Yes"
     validations:
       required: true
 
