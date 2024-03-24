@@ -46,7 +46,7 @@ body:
     id: d_title_additional
     attributes:
       label: Source Title (Additional)
-      value: 
+      value: "-"
   - type: input
     id: d_title_romanized
     attributes:
@@ -55,7 +55,7 @@ body:
   - type: input
     id: d_title_colloquial
     attributes:
-      label: 
+      label: "-"
       description: Unofficial/Colloquial Title
       value: "-"
 
@@ -364,14 +364,12 @@ body:
     attributes:
       label: Version
       placeholder: "ex: v1.02"
-      value: 
   - type: input
     id: d_collection
     attributes:
       label: Collections
       description: If multiple, separate with a semicolon.
       placeholder: "ex: Criterion Collection, New Line Platinum Series, Disney's Diamond Collection"
-      value: 
 
   - type: markdown
     attributes:
@@ -902,7 +900,7 @@ body:
   - type: dropdown
     id: d_categories_video
     attributes:
-      label: 
+      label: "-"
       description: Video Only
       multiple: true
       options:
@@ -921,7 +919,7 @@ body:
   - type: dropdown
     id: d_categories_software
     attributes:
-      label: 
+      label: "-"
       description: Software Only
       multiple: true
       options:
