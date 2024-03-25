@@ -48,17 +48,31 @@ body:
     id: d_title_additional
     attributes:
       label: Source Title (Additional)
-      value: "-"
+      value: "--"
   - type: input
     id: d_title_romanized
     attributes:
       label: Romanized Title
-      value: "-"
+      value: "--"
   - type: input
     id: d_title_colloquial
     attributes:
       label: "Unofficial/Colloquial Title"
-      value: "-"
+      value: "--"
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
+  - type: input
+    id: d_rel_date_original
+    attributes:
+      label: Work Original Release Date
+      description: |
+        If unable to find anything substantial for your release, referring to the listed copyright year(s) is acceptable.
+        Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if only an approximation. Can also use the form yyyy-Q# if only the year quarter is known.
+    validations:
+      required: true
 
   - type: markdown
     attributes:
@@ -371,7 +385,7 @@ body:
     attributes:
       label: Version
       description: "(ex: 'v1.02', 'Rev 1')"
-      value: "-"
+      value: "--"
   - type: input
     id: d_collection
     attributes:
@@ -379,7 +393,17 @@ body:
       description: |
         If multiple, separate with a semicolon.
         (ex: 'Criterion Collection', 'New Line Platinum Series', 'Disney's Diamond Collection')
-      value: "-"
+      value: "--"
+
+  - type: input
+    id: d_rel_date_edition
+    attributes:
+      label: Edition Release Date
+      description: |
+        If unable to find anything substantial for your release, using the most recent copyright year is acceptable.
+        Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if only an approximation. Can also use the form yyyy-Q# if only the year quarter is known.
+    validations:
+      required: true
 
   - type: markdown
     attributes:
@@ -418,8 +442,10 @@ body:
     id: d_disc_label
     attributes:
       label: "Disc Number - Disc Title"
-      description: Please match how it appears on the release.
-      placeholder: "ex: 'Disc 1 - Film', 'CD2 - Outtakes & Rarities', 'Widescreen Disc'"
+      description: |
+        Please match how it appears on the release.
+        ex: 'Disc 1 - Film', 'CD2 - Outtakes & Rarities', 'Widescreen Disc'
+      value: "--"
   - type: input
     id: d_serials_disc
     attributes:
@@ -943,12 +969,9 @@ body:
       label: (For Software Only)
       multiple: true
       options:
-        - -- O P E R A T I N G - S Y S T E M S --
+        - --- P L A T F O R M S ---
         - Apple Macintosh
-        - DOS
-        - Embedded System
-        - Linux
-        - Microsoft Windows
+        - IBM PC Compatible
         - Unknown
         - Other (Specify in 'Technical')
         - --- C A T E G O R I E S ---
@@ -1026,12 +1049,12 @@ body:
     id: d_universal_hash
     attributes:
       label: Universal Hash (SHA-1)
-      value: "-"
+      value: "--"
   - type: input
     id: d_data_start
     attributes:
       label: Non-zero data start
-      value: "-"
+      value: "--"
 
   - type: textarea
     id: d_comments
@@ -1050,7 +1073,7 @@ body:
 
         Transcribing from the packaging is more than enough, but if you decide to go the extra mile and load up the disc contents to confirm, that is great and very appreciated and there is an extra field included here to indicate that you confirmed the technical details in this way.
 
-        (Note: Values in parentheses below are just placeholders used for the examples. Please delete all parenthesized values and fill in with the correct information for your own media.)
+        (Note: Values in parentheses below are just placeholders used for the examples. Please delete all parenthesized values and fill in with the correct information for your own media. Examples are just suggestions, so if you want to format differently or include different types of info, you're welcome to do so.)
       value: |
         ---Example formatting for video discs---
         Region Codes: (A,B,C,ABC,FREE,1,2,3,4,5,6,7,8,0,ALL)
@@ -1067,15 +1090,15 @@ body:
 
         ---Example formatting for software discs---
         System Requirements: (Windows 95, 98, 2000; Mac OS X 10.6 or higher, etc.)
-        Compatible Architectures: (x86, m68k, PowerPC, ARM, etc.) [Note: If checking on Mac, please disable Rosetta first.]
-        Loaded disc to confirm?: (Yes or No, or specify discrepancies)
+        Compatible Architectures: (x86, m68k, PowerPC, ARM, etc.)
+        Loaded disc to confirm?: (Yes or No, or specify discrepancies) [Note: If checking on Mac, please disable Rosetta first.]
       render: Text
 
   - type: input
     id: d_date
     attributes:
       label: EXE Date (yyyy-MM-dd)
-      value: "-"
+      value: "--"
   - type: input
     id: d_errors
     attributes:
@@ -1107,7 +1130,7 @@ body:
   - type: dropdown
     id: d_ring_order
     attributes:
-      label: Layers Ring Order
+      label: Layer Ring Order
       options:
       - Please Select One
       - N/A (only one set of ringcodes)
@@ -1124,22 +1147,27 @@ body:
     id: d_ring_0_ma
     attributes:
       label: Mastering Code (laser branded/etched)
+      value: "--"
   - type: input
     id: d_ring_0_ma_sid
     attributes:
       label: Mastering SID Code
+      value: "--"
   - type: input
     id: d_ring_0_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
+      value: "--"
   - type: input
     id: d_ring_0_mo_sid
     attributes:
       label: Mould SID Code
+      value: "--"
   - type: input
     id: d_ring_0_mo
     attributes:
       label: Additional Mould Text
+      value: "--"
 
   - type: markdown
     attributes:
@@ -1152,22 +1180,27 @@ body:
     id: d_ring_1_ma
     attributes:
       label: Mastering Code (laser branded/etched)
+      value: "--"
   - type: input
     id: d_ring_1_ma_sid
     attributes:
       label: Mastering SID Code
+      value: "--"
   - type: input
     id: d_ring_1_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
+      value: "--"
   - type: input
     id: d_ring_1_mo_sid
     attributes:
       label: Mould SID Code
+      value: "--"
   - type: input
     id: d_ring_1_mo
     attributes:
       label: Additional Mould Text
+      value: "--"
 
   - type: markdown
     attributes:
@@ -1180,14 +1213,17 @@ body:
     id: d_ring_2_ma
     attributes:
       label: Mastering Code (laser branded/etched)
+      value: "--"
   - type: input
     id: d_ring_2_ma_sid
     attributes:
       label: Mastering SID Code
+      value: "--"
   - type: input
     id: d_ring_2_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
+      value: "--"
 
   - type: markdown
     attributes:
@@ -1200,14 +1236,17 @@ body:
     id: d_ring_3_ma
     attributes:
       label: Mastering Code (laser branded/etched)
+      value: "--"
   - type: input
     id: d_ring_3_ma_sid
     attributes:
       label: Mastering SID Code
+      value: "--"
   - type: input
     id: d_ring_3_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
+      value: "--"
 
   # Skip d_ring_0_offsets - Unused in submission form
   # Skip d_ring_0_0_id - Unused in submission form
@@ -1230,6 +1269,7 @@ body:
     id: d_pvd
     attributes:
       label: Primary Volume Descriptor (PVD) (ISO9660 FS only)
+      value: "--"
       render: Text
   # Skip d_d1_key - Systems with keys only
   # Skip d_d2_key - Systems with keys only
@@ -1237,11 +1277,13 @@ body:
     id: d_pic_data
     attributes:
       label: Permanent Information & Control (PIC)
+      value: "--"
       render: Text
   - type: textarea
     id: d_header
     attributes:
       label: Header
+      value: "--"
       render: Text
   # Skip d_ssranges - XGD only
 
@@ -1256,11 +1298,13 @@ body:
     id: d_protection
     attributes:
       label: Protection
+      value: "--"
       render: Text
   - type: textarea
     id: d_securom
     attributes:
       label: SecuROM Data
+      value: "--"
       render: Text
 
   # Dumpers and Status
