@@ -20,6 +20,8 @@ body:
       label: Media
       options:
         - Unspecified
+        - Blu-ray - BD-Video
+        - Blu-ray - Software
         - CD - Audio CD
         - CD - CD+G
         - CD - Enhanced CD
@@ -27,8 +29,6 @@ body:
         - CD - MP3 CD
         - CD - Software
         - CD - Video CD
-        - BD-ROM - BD-Video
-        - BD-ROM - Software
         - DVD - DVD-Audio
         - DVD - DVD-Video
         - DVD - Software
