@@ -30,6 +30,7 @@ body:
         - Playbutton
         - SACD
         - Other (Specify in comments)
+      default: 0
     validations:
       required: true
 
@@ -336,6 +337,7 @@ body:
         #- Yugoslavia
         #- Zambia
         #- Zimbabwe
+      default: 0
     validations:
       required: true
 
@@ -862,6 +864,7 @@ body:
       required: true
   # Skip d_languages_selection - PSX/PS2 only
   - type: dropdown
+    id: d_languages_check
     attributes:
       label: Checked languages?
       options:
@@ -1101,36 +1104,40 @@ body:
     attributes:
       value: "<br />"
 
+  - type: dropdown
+    id: d_ring_order
+    attributes:
+      label: Layers Ring Order
+      options:
+      - Please Select One
+      - N/A (only one set of ringcodes)
+      - Innermost to Outermost
+      - Outermost to Innermost
+      default: 0
+    validations:
+      required: true
+
   - type: markdown
     attributes:
       value: "### Layer 0 / Data Side"
-  - type: dropdown
-    attributes:
-      label: Ring Order
-      options:
-      - N/A (Only one set of ringcodes)
-      - Innermost to Outermost
-      - Outermost to Innermost
-    validations:
-      required: true
   - type: input
-    id: d_ring_0_ma1
+    id: d_ring_0_ma
     attributes:
       label: Mastering Code (laser branded/etched)
   - type: input
-    id: d_ring_0_ma1_sid
+    id: d_ring_0_ma_sid
     attributes:
       label: Mastering SID Code
   - type: input
-    id: d_ring_0_ts1
+    id: d_ring_0_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
   - type: input
-    id: d_ring_0_mo1_sid
+    id: d_ring_0_mo_sid
     attributes:
       label: Mould SID Code
   - type: input
-    id: d_ring_0_mo1
+    id: d_ring_0_mo
     attributes:
       label: Additional Mould Text
 
@@ -1142,23 +1149,23 @@ body:
     attributes:
       value: "### Layer 1 / Label Side"
   - type: input
-    id: d_ring_0_ma2
+    id: d_ring_1_ma
     attributes:
       label: Mastering Code (laser branded/etched)
   - type: input
-    id: d_ring_0_ma2_sid
+    id: d_ring_1_ma_sid
     attributes:
       label: Mastering SID Code
   - type: input
-    id: d_ring_0_ts2
+    id: d_ring_1_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
   - type: input
-    id: d_ring_0_mo2_sid
+    id: d_ring_1_mo_sid
     attributes:
       label: Mould SID Code
   - type: input
-    id: d_ring_0_mo2
+    id: d_ring_1_mo
     attributes:
       label: Additional Mould Text
 
@@ -1170,15 +1177,15 @@ body:
     attributes:
       value: "### Layer 2"
   - type: input
-    id: d_ring_0_ma3
+    id: d_ring_2_ma
     attributes:
       label: Mastering Code (laser branded/etched)
   - type: input
-    id: d_ring_0_ma3_sid
+    id: d_ring_2_ma_sid
     attributes:
       label: Mastering SID Code
   - type: input
-    id: d_ring_0_ts3
+    id: d_ring_2_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
 
@@ -1190,15 +1197,15 @@ body:
     attributes:
       value: "### Layer 3"
   - type: input
-    id: d_ring_0_ma4
+    id: d_ring_3_ma
     attributes:
       label: Mastering Code (laser branded/etched)
   - type: input
-    id: d_ring_0_ma4_sid
+    id: d_ring_3_ma_sid
     attributes:
       label: Mastering SID Code
   - type: input
-    id: d_ring_0_ts4
+    id: d_ring_3_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
 
