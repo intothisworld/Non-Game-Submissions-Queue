@@ -940,7 +940,7 @@ body:
       label: (For Software Only)
       multiple: true
       options:
-        - --O P E R A T I N G  S Y S T E M S--
+        - -- O P E R A T I N G - S Y S T E M S --
         - Apple Macintosh
         - DOS
         - Embedded System
