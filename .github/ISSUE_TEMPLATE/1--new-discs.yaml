@@ -368,7 +368,7 @@ body:
     id: d_version
     attributes:
       label: Version
-      description: "(ex: v1.02, Rev 1)"
+      description: "(ex: 'v1.02', 'Rev 1')"
       value: "-"
   - type: input
     id: d_collection
@@ -418,8 +418,6 @@ body:
       label: "Disc Number - Disc Title"
       description: Please match how it appears on the release.
       placeholder: "ex: 'Disc 1 - Film', 'CD2 - Outtakes & Rarities', 'Widescreen Disc'"
-    validations:
-      required: True
   - type: input
     id: d_serials_disc
     attributes:
@@ -942,14 +940,12 @@ body:
       label: (For Software Only)
       multiple: true
       options:
-        - --- P L A T F O R M S ---
-        - Embedded Systems
-        - Linux (x86)
-        - Mac (m68k)
-        - Mac (PowerPC)
-        - Mac (x86)
-        - Mac (ARM)
-        - Windows (x86)
+        - --O P E R A T I N G  S Y S T E M S--
+        - Apple Macintosh
+        - DOS
+        - Embedded System
+        - Linux
+        - Microsoft Windows
         - Unknown
         - Other (Specify in 'Technical')
         - --- C A T E G O R I E S ---
@@ -1064,11 +1060,12 @@ body:
           etc.)
         Subtitles: (English, English SDH, Japanese, Simplified Chinese, etc.)
         Closed Captioning [CC]: (Yes, No, or Unknown)
-        Confirmed internally?: (Yes or No, or specify discrepancies)
+        Loaded disc to confirm?: (Yes or No, or specify discrepancies)
 
         ---Example formatting for software discs---
         System Requirements: (Windows 95, 98, 2000; Mac OS X 10.6 or higher, etc.)
-        Confirmed internally?: (Yes or No, or specify discrepancies)
+        Compatible Architectures: (x86, m68k, PowerPC, ARM, etc.) [Note: If checking on Mac, please disable Rosetta first.]
+        Loaded disc to confirm?: (Yes or No, or specify discrepancies)
       render: Text
 
   - type: input
@@ -1094,7 +1091,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        (Ringcode information is <b><i>required</i></b> for all submissions. Please check very carefully. Some ringcodes (particularly mould text), can be very difficult to read clearly or even see sometimes. A magnifying glass can be very helpful here. And if you really want to be about as prepared as you can be for any difficulty of ringcode, a jeweler's loupe is absolutely the way to go. The types with both 30x and 60x magnification are the most useful here, and you can usually find those for under $10 on Amazon.)
+        Ringcode information is <b><i>required</i></b> for all submissions. Please check very carefully. Some ringcodes (particularly mould text), can be very difficult to read clearly or even see sometimes. A magnifying glass can be very helpful here. And if you really want to be about as prepared as you can be for any difficulty of ringcode, a jeweler's loupe is absolutely the way to go. The types with both 30x and 60x magnification are the most useful here, and you can usually find those for under $10 on Amazon.
+
+        In regards to ringcodes for discs with multiple layers: *Most* of the time the innermost ringcodes near the center hub will correlate to layer 0, and the next ring out will be for layer 1, and so on. This is not always the case though as some manufacturers will inscribe the ringcodes in reverse order (the outermost ring for layer 0 and then ascending inward). If you're unsure of the correct order of your disc's codes, just fill in the fields below using the typical ordering (innermost to outermost), and the mods will check and correct the order if necessary.
   # Skip d_ring - Unused in submission form
   # Skip d_ring_0_id - Unused in submission form
   
@@ -1104,10 +1103,16 @@ body:
 
   - type: markdown
     attributes:
-      value: "### Innermost Ring / Data Side"
-  - type: markdown
+      value: "### Layer 0 / Data Side"
+  - type: dropdown
     attributes:
-      value: "##### (Note: The innermost ring most often correlates to layer 0, but not always.)"
+      label: Ring Order
+      options:
+      - N/A (Only one set of ringcodes)
+      - Innermost to Outermost
+      - Outermost to Innermost
+    validations:
+      required: true
   - type: input
     id: d_ring_0_ma1
     attributes:
@@ -1135,10 +1140,7 @@ body:
 
   - type: markdown
     attributes:
-      value: "### Second Innermost Ring / Label Side"
-  - type: markdown
-    attributes:
-      value: "##### (Note: The second innermost ring most often correlates to layer 1, but not always.)"
+      value: "### Layer 1 / Label Side"
   - type: input
     id: d_ring_0_ma2
     attributes:
@@ -1166,10 +1168,7 @@ body:
 
   - type: markdown
     attributes:
-      value: "### Third Innermost Ring"
-  - type: markdown
-    attributes:
-      value: "##### (Note: The third innermost ring most often correlates to layer 2, but not always.)"
+      value: "### Layer 2"
   - type: input
     id: d_ring_0_ma3
     attributes:
@@ -1189,10 +1188,7 @@ body:
 
   - type: markdown
     attributes:
-      value: "### Fourth Innermost Ring"
-  - type: markdown
-    attributes:
-      value: "##### (Note: The fourth innermost ring most often correlates to layer 3, but not always.)"
+      value: "### Layer 3"
   - type: input
     id: d_ring_0_ma4
     attributes:
