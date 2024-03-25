@@ -15,95 +15,68 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: d_system
-    attributes:
-      label: System
-      options:
-        - Apple Macintosh
-        - Embedded Systems
-        - IBM PC Compatible
-        - Media - Audiobooks
-        - Media - Films
-        - Media - Music
-        - Media - Television
-        - Miscellaneous
-    validations:
-      required: true
-  - type: dropdown
     id: d_media
     attributes:
       label: Media
       options:
-        - CD-ROM
+        - Unspecified
         - CD-ROM - Audio CD
         - CD-ROM - CD+G
         - CD-ROM - Enhanced CD
-        - CD-ROM - HDCD
         - CD-ROM - Movie CD
         - CD-ROM - MP3 CD
+        - CD-ROM - Software
         - CD-ROM - Video CD
-        - BD-ROM
         - BD-ROM - BD-Video
-        - DVD-ROM
+        - BD-ROM - Software
         - DVD-ROM - DVD-Audio
         - DVD-ROM - DVD-Video
-        - HD-DVD
+        - DVD-ROM - Software
+        - HD DVD - HD-DVD-Video
         - Playbutton
         - SACD
         - Other (Specify in comments)
+      default: 0
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
+  - type: input
+    id: d_title_source
+    attributes:
+      label: Source Title
     validations:
       required: true
   - type: input
-    id: d_title
+    id: d_title_additional
     attributes:
-      label: Title
-    validations:
-      required: true
+      label: Source Title (Additional)
+      value: "-"
   - type: input
-    id: d_title_foreign
+    id: d_title_romanized
     attributes:
-      label: Foreign Title (Non-Latin)
+      label: Romanized Title
+      value: "-"
   - type: input
-    id: d_number
+    id: d_title_colloquial
     attributes:
-      label: Disc Number/Letter
-  - type: input
-    id: d_label
+      label: "Unofficial/Colloquial Title"
+      value: "-"
+
+  - type: markdown
     attributes:
-      label: Disc Title
-  - type: dropdown
-    id: d_category
-    attributes:
-      label: Category
-      options:
-        - Anime
-        - Audiobooks
-        - Comedy
-        - Device Drivers & Utilities
-        - Documentaries
-        - Documentaries - Conspiracy
-        - Educational
-        - General
-        - Instructional
-        - Karaoke
-        - Multimedia
-        - Operating Systems
-        - Promotional
-        - Software - Applications
-        - Software - Coverdiscs
-        - Soundtracks
-        - Soundtracks - Anime
-        - Soundtracks - Anime - Unofficial
-        - Soundtracks - Film
-        - Soundtracks - Game - Unofficial
-        - Soundtracks - Television
-    validations:
-      required: true
+      value: "<br />"
+
   - type: dropdown
     id: d_region
     attributes:
       label: Region
       options:
+        - Unknown
+        - Other (specify in comments)
         #- Afghanistan
         #- Aland Islands
         #- Albania
@@ -370,454 +343,702 @@ body:
         #- Yugoslavia
         #- Zambia
         #- Zimbabwe
-  - type: checkboxes
+      default: 0
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
+  - type: markdown
+    attributes:
+      value: "### Version and Editions"
+  - type: input
+    id: d_bundle
+    attributes:
+      label: Bundle
+      description: |
+        A bundle is any multi-disc set. If none, put "Standalone". If unknown, put "Unknown".
+        (ex: 'Collector's Boxset', 'Blu-ray Combo Pack', 'DVD Bundle', 'The Legend of Korra: The Complete Series' )
+    validations:
+      required: true
+  - type: input
+    id: d_editions
+    attributes:
+      label: Edition
+      description: |
+        If none, put "Standard". If unknown, put "Unknown".
+        (ex: '2017 Remaster', '30th Anniversary Edition', 'Unrated Version')
+    validations:
+      required: true
+  - type: input
+    id: d_version
+    attributes:
+      label: Version
+      description: "(ex: 'v1.02', 'Rev 1')"
+      value: "-"
+  - type: input
+    id: d_collection
+    attributes:
+      label: Collections
+      description: |
+        If multiple, separate with a semicolon.
+        (ex: 'Criterion Collection', 'New Line Platinum Series', 'Disney's Diamond Collection')
+      value: "-"
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
+  - type: markdown
+    attributes:
+      value: "### Package Information"
+  - type: input
+    id: d_serials_package
+    attributes:
+      label: Package Serials
+      description: |
+        Only input serials present on or within packaging. Don't include disc serials. If multiple, separate with a semicolon.
+        If none, put "NULL". If unknown, put "Unknown".
+    validations:
+      required: True
+  - type: input
+    id: d_barcodes_package
+    attributes:
+      label: Barcodes
+      description: |
+        If multiple, separate with a semicolon.
+        If none, put "NULL". If unknown, put "Unknown".
+    validations:
+      required: True
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
+  - type: markdown
+    attributes:
+      value: "### Disc Information"
+  - type: input
+    id: d_disc_label
+    attributes:
+      label: "Disc Number - Disc Title"
+      description: Please match how it appears on the release.
+      placeholder: "ex: 'Disc 1 - Film', 'CD2 - Outtakes & Rarities', 'Widescreen Disc'"
+  - type: input
+    id: d_serials_disc
+    attributes:
+      label: Disc Serials
+      description: Only input serials present on the disc label. If multiple, separate with a semicolon. If none, put "NULL".
+    validations:
+      required: True
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
+  - type: dropdown
     id: d_languages
     attributes:
       label: Languages
+      multiple: True
       options:
-        #- label: Abkhazian
-        #- label: Achinese
-        #- label: Acoli
-        #- label: Adangme
-        #- label: Adyghe
-        #- label: Afar
-        #- label: Afrihili
-        - label: Afrikaans
-        #- label: Ainu
-        #- label: Akan
-        #- label: Akkadian
-        - label: Albanian
-        #- label: Aleut
-        #- label: Amharic
-        #- label: Angika
-        - label: Arabic
-        #- label: Aragonese
-        #- label: Aramaic
-        - label: Armenian
-        #- label: Arapaho
-        #- label: Aromanian
-        #- label: Arawak
-        #- label: Assamese
-        #- label: Asturian
-        #- label: Athapascan
-        #- label: Avaric
-        #- label: Avestan
-        #- label: Awadhi
-        #- label: Aymara
-        #- label: Azerbaijani
-        #- label: Balinese
-        #- label: Baluchi
-        #- label: Bambara
-        #- label: Basa
-        #- label: Bashkir
-        - label: Basque
-        #- label: Beja
-        - label: Belarusian
-        #- label: Bemba
-        #- label: Bengali
-        #- label: Bhojpuri
-        #- label: Bikol
-        #- label: Bini
-        #- label: Bislama
-        #- label: Blin
-        #- label: Blissymbols
-        #- label: Bosnian
-        #- label: Braj
-        #- label: Breton
-        #- label: Buginese
-        - label: Bulgarian
-        #- label: Buriat
-        #- label: Burmese
-        #- label: Caddo
-        - label: Catalan
-        #- label: Cebuano
-        #- label: Central Khmer
-        #- label: Chagatai
-        #- label: Chamorro
-        #- label: Chechen
-        #- label: Cherokee
-        #- label: Cheyenne
-        #- label: Chibcha
-        #- label: Chichewa
-        - label: Chinese
-        #- label: Chinook Jargon
-        #- label: Chipewyan
-        #- label: Choctaw
-        #- label: Church Slavic
-        #- label: Chuukese
-        #- label: Chuvash
-        #- label: Classical Newari
-        #- label: Coptic
-        #- label: Cornish
-        #- label: Corsican
-        #- label: Cree
-        #- label: Creek
-        #- label: Creoles and Pidgins
-        #- label: English Creole
-        #- label: French Creole
-        #- label: Portuguese Creole
-        #- label: Crimean Tatar
-        - label: Croatian
-        - label: Czech
-        #- label: Dakota
-        - label: Danish
-        #- label: Dargwa
-        #- label: Delaware
-        #- label: Dinka
-        #- label: Divehi
-        #- label: Dogrib
-        #- label: Dogri
-        #- label: Duala
-        - label: Dutch
-        #- label: Middle Dutch
-        #- label: Dyula
-        #- label: Dzongkha
-        #- label: Eastern Frisian
-        #- label: Efik
-        #- label: Ancient Egyptian
-        #- label: Ekajuk
-        #- label: Elamite
-        - label: English
-        #- label: Old English
-        #- label: Middle English
-        #- label: Erzya
-        #- label: Esperanto
-        - label: Estonian
-        #- label: Ewe
-        #- label: Ewondo
-        #- label: Fang
-        #- label: Faroese
-        #- label: Fanti
-        #- label: Fijian
-        - label: Filipino
-        - label: Finnish
-        #- label: Fon
-        - label: French
-        #- label: Middle French
-        #- label: Old French
-        #- label: Friulian
-        #- label: Fulah
-        #- label: Ga
-        - label: Gaelic
-        #- label: Galibi Carib
-        #- label: Galician
-        #- label: Ganda
-        #- label: Gayo
-        #- label: Gbaya
-        #- label: Geez
-        #- label: Georgian
-        - label: German
-        #- label: Middle High German
-        #- label: Old High German
-        #- label: Gilbertese
-        #- label: Gondi
-        #- label: Gorontalo
-        #- label: Gothic
-        #- label: Grebo
-        - label: Greek
-        #- label: Ancient Greek
-        #- label: Guarani
-        #- label: Gujarati
-        #- label: Gwichin
-        #- label: Haida
-        #- label: Haitian
-        #- label: Hausa
-        #- label: Hawaiian
-        - label: Hebrew
-        #- label: Herero
-        #- label: Hiligaynon
-        - label: Hindi
-        #- label: Hiri Motu
-        #- label: Hittite
-        #- label: Hmong
-        - label: Hungarian
-        #- label: Hupa
-        #- label: Iban
-        - label: Icelandic
-        #- label: Ido
-        #- label: Igbo
-        #- label: Iloko
-        #- label: Inari Sami
-        - label: Indonesian
-        #- label: Ingush
-        #- label: Interlingua
-        #- label: Interlingue
-        #- label: Inuktitut
-        #- label: Inupiaq
-        - label: Irish
-        #- label: Middle Irish
-        #- label: Old Irish
-        - label: Italian
-        - label: Japanese
-        #- label: Javanese
-        #- label: Judeo Arabic
-        #- label: Judeo Persian
-        #- label: Kabardian
-        #- label: Kabyle
-        #- label: Kachin
-        #- label: Kalaallisut
-        #- label: Kalmyk
-        #- label: Kamba
-        #- label: Kannada
-        #- label: Kanuri
-        #- label: Karachay Balkar
-        #- label: Kara Kalpak
-        #- label: Karelian
-        #- label: Kashmiri
-        #- label: Kashubian
-        #- label: Kawi
-        #- label: Kazakh
-        #- label: Khasi
-        #- label: Khotanese
-        #- label: Kikuyu
-        #- label: Kimbundu
-        #- label: Kinyarwanda
-        #- label: Kirghiz
-        #- label: Klingon
-        #- label: Komi
-        #- label: Kongo
-        #- label: Konkani
-        - label: Korean
-        #- label: Kosraean
-        #- label: Kpelle
-        #- label: Kuanyama
-        #- label: Kumyk
-        #- label: Kurdish
-        #- label: Kurukh
-        #- label: Kutenai
-        #- label: Ladino
-        #- label: Lahnda
-        #- label: Lamba
-        #- label: Lao
-        - label: Latin
-        - label: Latvian
-        #- label: Lezghian
-        #- label: Limburgan
-        #- label: Lingala
-        - label: Lithuanian
-        #- label: Lojban
-        #- label: Low German
-        #- label: Lower Sorbian
-        #- label: Lozi
-        #- label: Luba Katanga
-        #- label: Luba Lulua
-        #- label: Luiseno
-        #- label: Lule Sami
-        #- label: Lunda
-        #- label: Luo
-        #- label: Lushai
-        #- label: Luxembourgish
-        - label: Macedonian
-        #- label: Madurese
-        #- label: Magahi
-        #- label: Maithili
-        #- label: Makasar
-        #- label: Malagasy
-        - label: Malay
-        #- label: Malayalam
-        #- label: Maltese
-        #- label: Manchu
-        #- label: Mandar
-        #- label: Mandingo
-        #- label: Manipuri
-        #- label: Manx
-        #- label: Maori
-        #- label: Mapudungun
-        #- label: Marathi
-        #- label: Mari
-        #- label: Marshallese
-        #- label: Marwari
-        #- label: Masai
-        #- label: Mende
-        #- label: Mikmaq
-        #- label: Minangkabau
-        #- label: Mirandese
-        #- label: Mohawk
-        #- label: Moksha
-        #- label: Mongo
-        #- label: Mongolian
-        #- label: Montenegrin
-        #- label: Mossi
-        #- label: N'Ko
-        #- label: Nauru
-        #- label: Navajo
-        #- label: N'donga
-        #- label: Neapolitan
-        #- label: Nepal Bhasa
-        #- label: Nepali
-        #- label: Nias
-        #- label: Niuean
-        #- label: Nogai
-        #- label: OldNorse
-        #- label: North Ndebele
-        #- label: Northern Frisian
-        #- label: Northern Sami
-        - label: Norwegian
-        #- label: Norwegian Bokmal
-        #- label: Norwegian Nynorsk
-        #- label: Nyamwezi
-        #- label: Nyankole
-        #- label: Nyoro
-        #- label: Nzima
-        #- label: Occitan
-        #- label: Old Occitan
-        #- label: Ojibwa
-        #- label: Oriya
-        #- label: Oromo
-        #- label: Osage
-        #- label: Ossetian
-        #- label: Pahlavi
-        #- label: Palauan
-        #- label: Pali
-        #- label: Pampanga
-        #- label: Pangasinan
-        #- label: Panjabi
-        #- label: Papiamento
-        #- label: Pedi
-        #- label: Persian
-        #- label: Old Persian
-        #- label: Phoenician
-        - label: Polish
-        - label: Portuguese
-        #- label: Pushto
-        #- label: Quechua
-        #- label: Rajasthani
-        #- label: Rapanui
-        #- label: Rarotongan
-        - label: Romanian
-        #- label: Romansh
-        #- label: Romany
-        #- label: Rundi
-        - label: Russian
-        #- label: Samaritan Aramaic
-        #- label: Samoan
-        #- label: Sandawe
-        #- label: Sango
-        #- label: Sanskrit
-        #- label: Santali
-        #- label: Sardinian
-        #- label: Sasak
-        #- label: Scots
-        #- label: Selkup
-        - label: Serbian
-        #- label: Serer
-        #- label: Shan
-        #- label: Shona
-        #- label: Sichuan Yi
-        #- label: Sicilian
-        #- label: Sidamo
-        #- label: Sign Languages
-        #- label: Siksika
-        #- label: Sindhi
-        #- label: Sinhala
-        #- label: Skolt Sami
-        - label: Slovak
-        - label: Slovenian
-        #- label: Sogdian
-        #- label: Somali
-        #- label: Soninke
-        #- label: Sotho
-        #- label: South Ndebele
-        #- label: Southern Altai
-        #- label: Southern Sami
-        - label: Spanish
-        #- label: Sranan Tongo
-        #- label: Standard Moroccan Tamazight
-        #- label: Sukuma
-        #- label: Sumerian
-        #- label: Sundanese
-        #- label: Susu
-        #- label: Swahili
-        #- label: Swati
-        - label: Swedish
-        #- label: Swiss German
-        #- label: Syriac
-        #- label: Classica lSyriac
-        - label: Tagalog
-        #- label: Tahitian
-        #- label: Tajik
-        #- label: Tamashek
-        - label: Tamil
-        #- label: Tatar
-        #- label: Telugu
-        #- label: Tereno
-        #- label: Tetum
-        - label: Thai
-        #- label: Tibetan
-        #- label: Tigre
-        #- label: Tigrinya
-        #- label: Timne
-        #- label: Tiv
-        #- label: Tlingit
-        #- label: Tok Pisin
-        #- label: Tokelau
-        #- label: Tonga Nyasa
-        #- label: Tonga Islands
-        #- label: Tsimshian
-        #- label: Tsonga
-        #- label: Tswana
-        #- label: Tumbuka
-        - label: Turkish
-        #- label: Ottoman Turkish
-        #- label: Turkmen
-        #- label: Tuvalu
-        #- label: Tuvinian
-        #- label: Twi
-        #- label: Udmurt
-        #- label: Ugaritic
-        #- label: Uighur
-        - label: Ukrainian
-        #- label: Umbundu
-        #- label: Upper Sorbian
-        #- label: Urdu
-        #- label: Uzbek
-        #- label: Vai
-        #- label: Venda
-        - label: Vietnamese
-        #- label: Volapuk
-        #- label: Votic
-        #- label: Walloon
-        #- label: Waray
-        #- label: Washo
-        - label: Welsh
-        #- label: Western Frisian
-        #- label: Wolaitta
-        #- label: Wolof
-        #- label: Xhosa
-        #- label: Yakut
-        #- label: Yao
-        #- label: Yapese
-        #- label: Yiddish
-        #- label: Yoruba
-        #- label: Zapotec
-        #- label: Zaza
-        #- label: Zenaga
-        #- label: Zhuang
-        #- label: Zulu
-        #- label: Zuni
-  # Skip d_languages_selection - PSX/PS2 only
-  - type: input
-    id: d_serial
-    attributes:
-      label: Serial
-  - type: input
-    id: d_barcode
-    attributes:
-      label: Barcode
-  - type: markdown
-    attributes:
-      value: ---
-
-  - type: input
-    id: d_date
-    attributes:
-      label: EXE Date (yyyy-MM-dd)
-  - type: input
-    id: d_errors
-    attributes:
-      label: Errors Count
+        - Unknown
+        - Other (specify in comments)
+        #- Abkhazian
+        #- Achinese
+        #- Acoli
+        #- Adangme
+        #- Adyghe
+        #- Afar
+        #- Afrihili
+        - Afrikaans
+        #- Ainu
+        #- Akan
+        #- Akkadian
+        - Albanian
+        #- Aleut
+        #- Amharic
+        #- Angika
+        - Arabic
+        #- Aragonese
+        #- Aramaic
+        - Armenian
+        #- Arapaho
+        #- Aromanian
+        #- Arawak
+        #- Assamese
+        #- Asturian
+        #- Athapascan
+        #- Avaric
+        #- Avestan
+        #- Awadhi
+        #- Aymara
+        #- Azerbaijani
+        #- Balinese
+        #- Baluchi
+        #- Bambara
+        #- Basa
+        #- Bashkir
+        - Basque
+        #- Beja
+        - Belarusian
+        #- Bemba
+        #- Bengali
+        #- Bhojpuri
+        #- Bikol
+        #- Bini
+        #- Bislama
+        #- Blin
+        #- Blissymbols
+        #- Bosnian
+        #- Braj
+        #- Breton
+        #- Buginese
+        - Bulgarian
+        #- Buriat
+        #- Burmese
+        #- Caddo
+        - Catalan
+        #- Cebuano
+        #- Central Khmer
+        #- Chagatai
+        #- Chamorro
+        #- Chechen
+        #- Cherokee
+        #- Cheyenne
+        #- Chibcha
+        #- Chichewa
+        - Chinese
+        #- Chinook Jargon
+        #- Chipewyan
+        #- Choctaw
+        #- Church Slavic
+        #- Chuukese
+        #- Chuvash
+        #- Classical Newari
+        #- Coptic
+        #- Cornish
+        #- Corsican
+        #- Cree
+        #- Creek
+        #- Creoles and Pidgins
+        #- English Creole
+        #- French Creole
+        #- Portuguese Creole
+        #- Crimean Tatar
+        - Croatian
+        - Czech
+        #- Dakota
+        - Danish
+        #- Dargwa
+        #- Delaware
+        #- Dinka
+        #- Divehi
+        #- Dogrib
+        #- Dogri
+        #- Duala
+        - Dutch
+        #- Middle Dutch
+        #- Dyula
+        #- Dzongkha
+        #- Eastern Frisian
+        #- Efik
+        #- Ancient Egyptian
+        #- Ekajuk
+        #- Elamite
+        - English
+        #- Old English
+        #- Middle English
+        #- Erzya
+        #- Esperanto
+        - Estonian
+        #- Ewe
+        #- Ewondo
+        #- Fang
+        #- Faroese
+        #- Fanti
+        #- Fijian
+        - Filipino
+        - Finnish
+        #- Fon
+        - French
+        #- Middle French
+        #- Old French
+        #- Friulian
+        #- Fulah
+        #- Ga
+        - Gaelic
+        #- Galibi Carib
+        #- Galician
+        #- Ganda
+        #- Gayo
+        #- Gbaya
+        #- Geez
+        #- Georgian
+        - German
+        #- Middle High German
+        #- Old High German
+        #- Gilbertese
+        #- Gondi
+        #- Gorontalo
+        #- Gothic
+        #- Grebo
+        - Greek
+        #- Ancient Greek
+        #- Guarani
+        #- Gujarati
+        #- Gwichin
+        #- Haida
+        #- Haitian
+        #- Hausa
+        #- Hawaiian
+        - Hebrew
+        #- Herero
+        #- Hiligaynon
+        - Hindi
+        #- Hiri Motu
+        #- Hittite
+        #- Hmong
+        - Hungarian
+        #- Hupa
+        #- Iban
+        - Icelandic
+        #- Ido
+        #- Igbo
+        #- Iloko
+        #- Inari Sami
+        - Indonesian
+        #- Ingush
+        #- Interlingua
+        #- Interlingue
+        #- Inuktitut
+        #- Inupiaq
+        - Irish
+        #- Middle Irish
+        #- Old Irish
+        - Italian
+        - Japanese
+        #- Javanese
+        #- Judeo Arabic
+        #- Judeo Persian
+        #- Kabardian
+        #- Kabyle
+        #- Kachin
+        #- Kalaallisut
+        #- Kalmyk
+        #- Kamba
+        #- Kannada
+        #- Kanuri
+        #- Karachay Balkar
+        #- Kara Kalpak
+        #- Karelian
+        #- Kashmiri
+        #- Kashubian
+        #- Kawi
+        #- Kazakh
+        #- Khasi
+        #- Khotanese
+        #- Kikuyu
+        #- Kimbundu
+        #- Kinyarwanda
+        #- Kirghiz
+        #- Klingon
+        #- Komi
+        #- Kongo
+        #- Konkani
+        - Korean
+        #- Kosraean
+        #- Kpelle
+        #- Kuanyama
+        #- Kumyk
+        #- Kurdish
+        #- Kurukh
+        #- Kutenai
+        #- Ladino
+        #- Lahnda
+        #- Lamba
+        #- Lao
+        - Latin
+        - Latvian
+        #- Lezghian
+        #- Limburgan
+        #- Lingala
+        - Lithuanian
+        #- Lojban
+        #- Low German
+        #- Lower Sorbian
+        #- Lozi
+        #- Luba Katanga
+        #- Luba Lulua
+        #- Luiseno
+        #- Lule Sami
+        #- Lunda
+        #- Luo
+        #- Lushai
+        #- Luxembourgish
+        - Macedonian
+        #- Madurese
+        #- Magahi
+        #- Maithili
+        #- Makasar
+        #- Malagasy
+        - Malay
+        #- Malayalam
+        #- Maltese
+        #- Manchu
+        #- Mandar
+        #- Mandingo
+        #- Manipuri
+        #- Manx
+        #- Maori
+        #- Mapudungun
+        #- Marathi
+        #- Mari
+        #- Marshallese
+        #- Marwari
+        #- Masai
+        #- Mende
+        #- Mikmaq
+        #- Minangkabau
+        #- Mirandese
+        #- Mohawk
+        #- Moksha
+        #- Mongo
+        #- Mongolian
+        #- Montenegrin
+        #- Mossi
+        #- N'Ko
+        #- Nauru
+        #- Navajo
+        #- N'donga
+        #- Neapolitan
+        #- Nepal Bhasa
+        #- Nepali
+        #- Nias
+        #- Niuean
+        #- Nogai
+        #- OldNorse
+        #- North Ndebele
+        #- Northern Frisian
+        #- Northern Sami
+        - Norwegian
+        #- Norwegian Bokmal
+        #- Norwegian Nynorsk
+        #- Nyamwezi
+        #- Nyankole
+        #- Nyoro
+        #- Nzima
+        #- Occitan
+        #- Old Occitan
+        #- Ojibwa
+        #- Oriya
+        #- Oromo
+        #- Osage
+        #- Ossetian
+        #- Pahlavi
+        #- Palauan
+        #- Pali
+        #- Pampanga
+        #- Pangasinan
+        #- Panjabi
+        #- Papiamento
+        #- Pedi
+        #- Persian
+        #- Old Persian
+        #- Phoenician
+        - Polish
+        - Portuguese
+        #- Pushto
+        #- Quechua
+        #- Rajasthani
+        #- Rapanui
+        #- Rarotongan
+        - Romanian
+        #- Romansh
+        #- Romany
+        #- Rundi
+        - Russian
+        #- Samaritan Aramaic
+        #- Samoan
+        #- Sandawe
+        #- Sango
+        #- Sanskrit
+        #- Santali
+        #- Sardinian
+        #- Sasak
+        #- Scots
+        #- Selkup
+        - Serbian
+        #- Serer
+        #- Shan
+        #- Shona
+        #- Sichuan Yi
+        #- Sicilian
+        #- Sidamo
+        #- Sign Languages
+        #- Siksika
+        #- Sindhi
+        #- Sinhala
+        #- Skolt Sami
+        - Slovak
+        - Slovenian
+        #- Sogdian
+        #- Somali
+        #- Soninke
+        #- Sotho
+        #- South Ndebele
+        #- Southern Altai
+        #- Southern Sami
+        - Spanish
+        #- Sranan Tongo
+        #- Standard Moroccan Tamazight
+        #- Sukuma
+        #- Sumerian
+        #- Sundanese
+        #- Susu
+        #- Swahili
+        #- Swati
+        - Swedish
+        #- Swiss German
+        #- Syriac
+        #- Classica lSyriac
+        - Tagalog
+        #- Tahitian
+        #- Tajik
+        #- Tamashek
+        - Tamil
+        #- Tatar
+        #- Telugu
+        #- Tereno
+        #- Tetum
+        - Thai
+        #- Tibetan
+        #- Tigre
+        #- Tigrinya
+        #- Timne
+        #- Tiv
+        #- Tlingit
+        #- Tok Pisin
+        #- Tokelau
+        #- Tonga Nyasa
+        #- Tonga Islands
+        #- Tsimshian
+        #- Tsonga
+        #- Tswana
+        #- Tumbuka
+        - Turkish
+        #- Ottoman Turkish
+        #- Turkmen
+        #- Tuvalu
+        #- Tuvinian
+        #- Twi
+        #- Udmurt
+        #- Ugaritic
+        #- Uighur
+        - Ukrainian
+        #- Umbundu
+        #- Upper Sorbian
+        #- Urdu
+        #- Uzbek
+        #- Vai
+        #- Venda
+        - Vietnamese
+        #- Volapuk
+        #- Votic
+        #- Walloon
+        #- Waray
+        #- Washo
+        - Welsh
+        #- Western Frisian
+        #- Wolaitta
+        #- Wolof
+        #- Xhosa
+        #- Yakut
+        #- Yao
+        #- Yapese
+        #- Yiddish
+        #- Yoruba
+        #- Zapotec
+        #- Zaza
+        #- Zenaga
+        #- Zhuang
+        #- Zulu
+        #- Zuni
     validations:
       required: true
+  # Skip d_languages_selection - PSX/PS2 only
+  - type: dropdown
+    id: d_languages_check
+    attributes:
+      label: Checked languages?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
+  # Category Tags
+  - type: markdown
+    attributes:
+      value: "## Category Tags"
+  - type: dropdown
+    id: d_categories_content
+    attributes:
+      label: Content Type
+      multiple: true
+      options:
+        - Audio
+        - Documents
+        - Software
+        - Video
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
+  - type: markdown
+    attributes:
+      value: "### Primary Categories"
+  - type: dropdown
+    id: d_categories_audio
+    attributes:
+      label: (For Audio Only)
+      multiple: true
+      options:
+        - Ambience
+        - Audiobooks
+        - Comedy
+        - Drama
+        - Instructional
+        - Music
+        - Radio
+        - Sound Effects
+        - Soundtracks
+        - Spoken
+        - Other (Specify in comments)
+      default: 1
+  - type: dropdown
+    id: d_categories_video
+    attributes:
+      label: (For Video Only)
+      multiple: true
+      options:
+        - Ambience
+        - Comedy
+        - Documentaries
+        - Drama
+        - Films
+        - Instructional
+        - Music
+        - Promotional
+        - Spoken
+        - Sports
+        - Television
+        - Other (Specify in comments)
+  - type: dropdown
+    id: d_categories_software
+    attributes:
+      label: (For Software Only)
+      multiple: true
+      options:
+        - -- O P E R A T I N G - S Y S T E M S --
+        - Apple Macintosh
+        - DOS
+        - Embedded System
+        - Linux
+        - Microsoft Windows
+        - Unknown
+        - Other (Specify in 'Technical')
+        - --- C A T E G O R I E S ---
+        - Applications
+        - Drivers
+        - Educational
+        - Multimedia
+        - Operating Systems
+        - Promotional
+        - Utilities
+        - Other (Specify in comments)
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
+  - type: dropdown
+    id: d_categories_special
+    attributes:
+      label: Special Interest Tags
+      multiple: true
+      options:
+        - Animation
+        - Art
+        - Automotive
+        - Business & Finance
+        - Comedy
+        - Comics
+        - Computing
+        - Creative Resources
+        - Drama
+        - Educational
+        - Films
+        - Fitness
+        - Games
+        - History
+        - Languages
+        - Literature
+        - Music
+        - Periodicals
+        - Philosophy & Religion
+        - Politics
+        - Radio
+        - Self-Improvement
+        - Sports
+        - Television
+        - None of the above
+        - Other (Specify in comments)
+    validations:
+      required: True
+  - type: dropdown
+    id: d_categories_release
+    attributes:
+      label: Release Context
+      multiple: true
+      options:
+        - Bonus Discs
+        - Covermounts
+        - Promotional
+        - Unofficial
+        - None of the above, or unknown
+        - Other (Specify in comments)
+    validations:
+      required: True
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
+  # Additional Common Info
+  - type: markdown
+    attributes:
+      value: "## Additional Common Info"
+  - type: input
+    id: d_universal_hash
+    attributes:
+      label: Universal Hash (SHA-1)
+      value: "-"
+  - type: input
+    id: d_data_start
+    attributes:
+      label: Non-zero data start
+      value: "-"
+
   - type: textarea
     id: d_comments
     attributes:
@@ -826,90 +1047,171 @@ body:
     id: d_contents
     attributes:
       label: Contents
+  - type: textarea
+    id: d_technical
+    attributes:
+      label: Technical
+      description: |
+        Filling in this information is not required, but encouraged. Due to inconsistencies in how technical details are listed on different releases, please simply transcribe the info as it appears on your release. We'll look at potentially standardizing all the terminology later.
+
+        Transcribing from the packaging is more than enough, but if you decide to go the extra mile and load up the disc contents to confirm, that is great and very appreciated and there is an extra field included here to indicate that you confirmed the technical details in this way.
+
+        (Note: Values in parentheses below are just placeholders used for the examples. Please delete all parenthesized values and fill in with the correct information for your own media.)
+      value: |
+        ---Example formatting for video discs---
+        Region Codes: (A,B,C,ABC,FREE,1,2,3,4,5,6,7,8,0,ALL)
+        TV Format: (NTSC, PAL, SECAM)
+        Aspect Ratio: (16:9, 4:3, Anamorphic Widescreen, Pan & Scan, etc.)
+        Audio Languages: (
+          English - DTS-HD MA 7.1, Dolby True HD 5.1, PCM 2.0
+          French  - Dolby Digital Mono, Dolby Digital 2.0
+          Spanish - Dolby Surround
+          etc.)
+        Subtitles: (English, English SDH, Japanese, Simplified Chinese, etc.)
+        Closed Captioning [CC]: (Yes, No, or Unknown)
+        Loaded disc to confirm?: (Yes or No, or specify discrepancies)
+
+        ---Example formatting for software discs---
+        System Requirements: (Windows 95, 98, 2000; Mac OS X 10.6 or higher, etc.)
+        Compatible Architectures: (x86, m68k, PowerPC, ARM, etc.) [Note: If checking on Mac, please disable Rosetta first.]
+        Loaded disc to confirm?: (Yes or No, or specify discrepancies)
+      render: Text
+
+  - type: input
+    id: d_date
+    attributes:
+      label: EXE Date (yyyy-MM-dd)
+      value: "-"
+  - type: input
+    id: d_errors
+    attributes:
+      label: Errors Count
+    validations:
+      required: true
 
   - type: markdown
     attributes:
+      value: "<br />"
+
+  # Ringcode Information
+  - type: markdown
+    attributes:
       value: "## Ringcode Information"
+  - type: markdown
+    attributes:
+      value: |
+        Ringcode information is <b><i>required</i></b> for all submissions. Please check very carefully. Some ringcodes (particularly mould text), can be very difficult to read clearly or even see sometimes. A magnifying glass can be very helpful here. And if you really want to be about as prepared as you can be for any difficulty of ringcode, a jeweler's loupe is absolutely the way to go. The types with both 30x and 60x magnification are the most useful here, and you can usually find those for under $10 on Amazon.
+
+        In regards to ringcodes for discs with multiple layers: *Most* of the time the innermost ringcodes near the center hub will correlate to layer 0, and the next ring out will be for layer 1, and so on. This is not always the case though as some manufacturers will inscribe the ringcodes in reverse order (the outermost ring for layer 0 and then ascending inward). If you're unsure of the correct order of your disc's codes, just fill in the fields below using the typical ordering (innermost to outermost), and the mods will check and correct the order if necessary.
   # Skip d_ring - Unused in submission form
   # Skip d_ring_0_id - Unused in submission form
+  
+  - type: markdown
+    attributes:
+      value: "<br />"
+
+  - type: dropdown
+    id: d_ring_order
+    attributes:
+      label: Layers Ring Order
+      options:
+      - Please Select One
+      - N/A (only one set of ringcodes)
+      - Innermost to Outermost
+      - Outermost to Innermost
+      default: 0
+    validations:
+      required: true
 
   - type: markdown
     attributes:
       value: "### Layer 0 / Data Side"
   - type: input
-    id: d_ring_0_ma1
+    id: d_ring_0_ma
     attributes:
       label: Mastering Code (laser branded/etched)
   - type: input
-    id: d_ring_0_ma1_sid
+    id: d_ring_0_ma_sid
     attributes:
       label: Mastering SID Code
   - type: input
-    id: d_ring_0_ts1
+    id: d_ring_0_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
   - type: input
-    id: d_ring_0_mo1_sid
+    id: d_ring_0_mo_sid
     attributes:
       label: Mould SID Code
   - type: input
-    id: d_ring_0_mo1
+    id: d_ring_0_mo
     attributes:
       label: Additional Mould Text
+
+  - type: markdown
+    attributes:
+      value: "<br />"
 
   - type: markdown
     attributes:
       value: "### Layer 1 / Label Side"
   - type: input
-    id: d_ring_0_ma2
+    id: d_ring_1_ma
     attributes:
       label: Mastering Code (laser branded/etched)
   - type: input
-    id: d_ring_0_ma2_sid
+    id: d_ring_1_ma_sid
     attributes:
       label: Mastering SID Code
   - type: input
-    id: d_ring_0_ts2
+    id: d_ring_1_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
   - type: input
-    id: d_ring_0_mo2_sid
+    id: d_ring_1_mo_sid
     attributes:
       label: Mould SID Code
   - type: input
-    id: d_ring_0_mo2
+    id: d_ring_1_mo
     attributes:
       label: Additional Mould Text
 
   - type: markdown
     attributes:
+      value: "<br />"
+
+  - type: markdown
+    attributes:
       value: "### Layer 2"
   - type: input
-    id: d_ring_0_ma3
+    id: d_ring_2_ma
     attributes:
       label: Mastering Code (laser branded/etched)
   - type: input
-    id: d_ring_0_ma3_sid
+    id: d_ring_2_ma_sid
     attributes:
       label: Mastering SID Code
   - type: input
-    id: d_ring_0_ts3
+    id: d_ring_2_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
 
   - type: markdown
     attributes:
+      value: "<br />"
+
+  - type: markdown
+    attributes:
       value: "### Layer 3"
   - type: input
-    id: d_ring_0_ma4
+    id: d_ring_3_ma
     attributes:
       label: Mastering Code (laser branded/etched)
   - type: input
-    id: d_ring_0_ma4_sid
+    id: d_ring_3_ma_sid
     attributes:
       label: Mastering SID Code
   - type: input
-    id: d_ring_0_ts4
+    id: d_ring_3_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
 
@@ -919,31 +1221,12 @@ body:
   # Skip d_ring_0_0_value - Unused in submission form
   # Skip d_ring_count - Unused in submission form
 
-  # Version and Editions
-  - type: markdown
-    attributes:
-      value: "## Version and Editions"
-  - type: input
-    id: d_version
-    attributes:
-      label: Version
-  - type: input
-    id: d_editions
-    attributes:
-      label: Edition
-
   # EDC
   # Skip d_edc - PSX only
 
-  # Parent/Clone Relationship
   - type: markdown
     attributes:
-      value: "## Parent/Clone Relationship"
-  - type: input
-    id: d_parent_id
-    attributes:
-      label: Parent ID
-  # Skip d_is_regional_parent - Unused in submission form
+      value: "<br />"
 
   # Extras
   - type: markdown
@@ -953,16 +1236,19 @@ body:
     id: d_pvd
     attributes:
       label: Primary Volume Descriptor (PVD) (ISO9660 FS only)
+      render: Text
   # Skip d_d1_key - Systems with keys only
   # Skip d_d2_key - Systems with keys only
   - type: textarea
     id: d_pic_data
     attributes:
       label: Permanent Information & Control (PIC)
+      render: Text
   - type: textarea
     id: d_header
     attributes:
       label: Header
+      render: Text
   # Skip d_ssranges - XGD only
 
   # Copy Protection
@@ -976,10 +1262,12 @@ body:
     id: d_protection
     attributes:
       label: Protection
+      render: Text
   - type: textarea
     id: d_securom
     attributes:
       label: SecuROM Data
+      render: Text
 
   # Dumpers and Status
   # Skip d_status - Unused in submission form
@@ -994,17 +1282,19 @@ body:
     id: d_tracks
     attributes:
       label: ClrMamePro Data (Track Hashes)
+      render: xml
   - type: textarea
     id: d_cue
     attributes:
       label: Cuesheet
+      render: cue
   # Skip d_offset - Unused in submission form
   - type: input
     id: d_offset_text
     attributes:
       label: Write Offset
 
-  # Tracks and Write Offsets
+  # Sizes and Checksums
   - type: markdown
     attributes:
       value: "## Sizes and Checksums (DVD, HD-DVD, BD, SACD)"
@@ -1020,10 +1310,6 @@ body:
     id: d_layerbreak_3
     attributes:
       label: Layerbreak 3
-  - type: textarea
-    id: d_pic_identifier
-    attributes:
-      label: Permanent Information & Control (PIC)
   - type: input
     id: d_size
     attributes:
@@ -1041,12 +1327,24 @@ body:
     attributes:
       label: SHA-1
 
-  # Dumping Info
   - type: markdown
     attributes:
-      value: "## Dumping Info"
+      value: "<br />"
+
+  # Dumping Info & Attachments
+  - type: markdown
+    attributes:
+      value: "## Dumping Info & Attachments"
   - type: textarea
     id: Dumping_Info
     attributes:
       label: Dumping Info
       description: Full contents of the dumping info section
+      render: Text
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments (Logs & Photos/Scans)
+      description: Please attach dump logs (mandatory). Photos/scans are not required, but are extremely helpful and highly encouraged.
+    validations:
+      required: true
