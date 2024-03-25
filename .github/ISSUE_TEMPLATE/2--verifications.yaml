@@ -20,18 +20,18 @@ body:
       label: Media
       options:
         - Unspecified
-        - CD-ROM - Audio CD
-        - CD-ROM - CD+G
-        - CD-ROM - Enhanced CD
-        - CD-ROM - Movie CD
-        - CD-ROM - MP3 CD
-        - CD-ROM - Software
-        - CD-ROM - Video CD
+        - CD - Audio CD
+        - CD - CD+G
+        - CD - Enhanced CD
+        - CD - Movie CD
+        - CD - MP3 CD
+        - CD - Software
+        - CD - Video CD
         - BD-ROM - BD-Video
         - BD-ROM - Software
-        - DVD-ROM - DVD-Audio
-        - DVD-ROM - DVD-Video
-        - DVD-ROM - Software
+        - DVD - DVD-Audio
+        - DVD - DVD-Video
+        - DVD - Software
         - HD DVD - HD-DVD-Video
         - Playbutton
         - SACD
