@@ -1397,15 +1397,7 @@ body:
 
   - type: markdown
     attributes:
-      value: <br />
-
-  - type: markdown
-    attributes:
       value: ---
-
-  - type: markdown
-    attributes:
-      value: <br />
 
   - type: textarea
     id: user_feedback
