@@ -1389,9 +1389,16 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: |
+        <br />
+        ---
+        <br />
+
   - type: textarea
     id: user_feedback
     attributes:
-      label: Feedback
-      description: This submission form is somewhat of a rough draft of the submission form that will be used on the project's website once it's established. What did you think? Anything you particularly liked or dislike? Do you have any suggestions for things that could be changed or implemented, or questions about things that need to be clarified? Please let us know your thoughts. Thanks for contributing!
+      label: User Feedback
+      description: This submission form is a bit of a rough draft of the submission form that will be used on the project's website once it is established. What did you think? Anything you particularly liked or disliked? Do you have any suggestions for things that could be changed or implemented, or questions about things that need to be clarified? Please let us know your thoughts. Thanks for contributing!
       value: --
