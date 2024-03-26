@@ -1367,14 +1367,12 @@ body:
     attributes:
       label: SHA-1
 
-  - type: markdown
-    attributes:
-      value: "<br />"
-
   # Dumping Info & Attachments
   - type: markdown
     attributes:
-      value: "## Dumping Info & Attachments"
+      value: |
+        <br />
+        ## Dumping Info & Attachments
   - type: textarea
     id: Dumping_Info
     attributes:
@@ -1388,6 +1386,10 @@ body:
       description: Please attach dump logs (mandatory). Photos/scans are not required, but are extremely helpful and highly encouraged.
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: <br />
 
   - type: markdown
     attributes:
