@@ -1373,12 +1373,14 @@ body:
     attributes:
       label: SHA-1
 
+  - type: markdown
+    attributes:
+      value: <br />
+
   # Dumping Info & Attachments
   - type: markdown
     attributes:
-      value: |
-        <br />
-        ## Dumping Info & Attachments
+      value: "## Dumping Info & Attachments"
   - type: textarea
     id: Dumping_Info
     attributes:
