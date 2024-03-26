@@ -48,17 +48,17 @@ body:
     id: d_title_additional
     attributes:
       label: Source Title (Additional)
-      value: "--"
+      value: --
   - type: input
     id: d_title_romanized
     attributes:
       label: Romanized Title
-      value: "--"
+      value: --
   - type: input
     id: d_title_colloquial
     attributes:
       label: "Unofficial/Colloquial Title"
-      value: "--"
+      value: --
 
   - type: markdown
     attributes:
@@ -71,8 +71,6 @@ body:
       description: |
         If unable to find anything substantial for your release, referring to the listed copyright year(s) is acceptable.
         Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if only an approximation. Can also use the form yyyy-Q# if only the year quarter is known.
-    validations:
-      required: true
 
   - type: markdown
     attributes:
@@ -385,7 +383,7 @@ body:
     attributes:
       label: Version
       description: "(ex: 'v1.02', 'Rev 1')"
-      value: "--"
+      value: --
   - type: input
     id: d_collection
     attributes:
@@ -393,7 +391,11 @@ body:
       description: |
         If multiple, separate with a semicolon.
         (ex: 'Criterion Collection', 'New Line Platinum Series', 'Disney's Diamond Collection')
-      value: "--"
+      value: --
+
+  - type: markdown
+    attributes:
+      value: "<br />"
 
   - type: input
     id: d_rel_date_edition
@@ -445,7 +447,7 @@ body:
       description: |
         Please match how it appears on the release.
         ex: 'Disc 1 - Film', 'CD2 - Outtakes & Rarities', 'Widescreen Disc'
-      value: "--"
+      value: --
   - type: input
     id: d_serials_disc
     attributes:
@@ -1049,12 +1051,12 @@ body:
     id: d_universal_hash
     attributes:
       label: Universal Hash (SHA-1)
-      value: "--"
+      value: --
   - type: input
     id: d_data_start
     attributes:
       label: Non-zero data start
-      value: "--"
+      value: --
 
   - type: textarea
     id: d_comments
@@ -1098,7 +1100,7 @@ body:
     id: d_date
     attributes:
       label: EXE Date (yyyy-MM-dd)
-      value: "--"
+      value: --
   - type: input
     id: d_errors
     attributes:
@@ -1147,27 +1149,27 @@ body:
     id: d_ring_0_ma
     attributes:
       label: Mastering Code (laser branded/etched)
-      value: "--"
+      value: --
   - type: input
     id: d_ring_0_ma_sid
     attributes:
       label: Mastering SID Code
-      value: "--"
+      value: --
   - type: input
     id: d_ring_0_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
-      value: "--"
+      value: --
   - type: input
     id: d_ring_0_mo_sid
     attributes:
       label: Mould SID Code
-      value: "--"
+      value: --
   - type: input
     id: d_ring_0_mo
     attributes:
       label: Additional Mould Text
-      value: "--"
+      value: --
 
   - type: markdown
     attributes:
@@ -1180,27 +1182,27 @@ body:
     id: d_ring_1_ma
     attributes:
       label: Mastering Code (laser branded/etched)
-      value: "--"
+      value: --
   - type: input
     id: d_ring_1_ma_sid
     attributes:
       label: Mastering SID Code
-      value: "--"
+      value: --
   - type: input
     id: d_ring_1_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
-      value: "--"
+      value: --
   - type: input
     id: d_ring_1_mo_sid
     attributes:
       label: Mould SID Code
-      value: "--"
+      value: --
   - type: input
     id: d_ring_1_mo
     attributes:
       label: Additional Mould Text
-      value: "--"
+      value: --
 
   - type: markdown
     attributes:
@@ -1213,17 +1215,17 @@ body:
     id: d_ring_2_ma
     attributes:
       label: Mastering Code (laser branded/etched)
-      value: "--"
+      value: --
   - type: input
     id: d_ring_2_ma_sid
     attributes:
       label: Mastering SID Code
-      value: "--"
+      value: --
   - type: input
     id: d_ring_2_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
-      value: "--"
+      value: --
 
   - type: markdown
     attributes:
@@ -1236,17 +1238,17 @@ body:
     id: d_ring_3_ma
     attributes:
       label: Mastering Code (laser branded/etched)
-      value: "--"
+      value: --
   - type: input
     id: d_ring_3_ma_sid
     attributes:
       label: Mastering SID Code
-      value: "--"
+      value: --
   - type: input
     id: d_ring_3_ts
     attributes:
       label: Toolstamp or Mastering Code (engraved/stamped)
-      value: "--"
+      value: --
 
   # Skip d_ring_0_offsets - Unused in submission form
   # Skip d_ring_0_0_id - Unused in submission form
@@ -1269,7 +1271,7 @@ body:
     id: d_pvd
     attributes:
       label: Primary Volume Descriptor (PVD) (ISO9660 FS only)
-      value: "--"
+      value: --
       render: Text
   # Skip d_d1_key - Systems with keys only
   # Skip d_d2_key - Systems with keys only
@@ -1277,13 +1279,13 @@ body:
     id: d_pic_data
     attributes:
       label: Permanent Information & Control (PIC)
-      value: "--"
+      value: --
       render: Text
   - type: textarea
     id: d_header
     attributes:
       label: Header
-      value: "--"
+      value: --
       render: Text
   # Skip d_ssranges - XGD only
 
@@ -1298,13 +1300,13 @@ body:
     id: d_protection
     attributes:
       label: Protection
-      value: "--"
+      value: --
       render: Text
   - type: textarea
     id: d_securom
     attributes:
       label: SecuROM Data
-      value: "--"
+      value: --
       render: Text
 
   # Dumpers and Status
@@ -1386,3 +1388,10 @@ body:
       description: Please attach dump logs (mandatory). Photos/scans are not required, but are extremely helpful and highly encouraged.
     validations:
       required: true
+
+  - type: textarea
+    id: user_feedback
+    attributes:
+      label: Feedback
+      description: This submission form is somewhat of a rough draft of the submission form that will be used on the project's website once it's established. What did you think? Anything you particularly liked or dislike? Do you have any suggestions for things that could be changed or implemented, or questions about things that need to be clarified? Please let us know your thoughts. Thanks for contributing!
+      value: --
