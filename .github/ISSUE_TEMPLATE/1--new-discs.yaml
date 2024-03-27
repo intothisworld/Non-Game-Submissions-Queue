@@ -64,18 +64,6 @@ body:
     attributes:
       value: "<br />"
 
-  - type: input
-    id: d_rel_date_original
-    attributes:
-      label: Work Original Release Date
-      description: |
-        If unable to find anything substantial for your release, referring to the listed copyright year(s) is acceptable.
-        Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if only an approximation. Can also use the form yyyy-Q# if only the year quarter is known.
-
-  - type: markdown
-    attributes:
-      value: "<br />"
-
   - type: dropdown
     id: d_region
     attributes:
@@ -366,7 +354,7 @@ body:
       label: Bundle
       description: |
         A bundle is any multi-disc set. If none, put "Standalone". If unknown, put "Unknown".
-        (ex: 'Collector's Boxset', 'Blu-ray Combo Pack', 'DVD Bundle', 'The Legend of Korra: The Complete Series' )
+        (ex: 'The Legend of Korra: The Complete Series', '20th Anniversary Collector's Boxset', 'Blu-ray Combo Pack')
     validations:
       required: true
   - type: input
@@ -397,15 +385,35 @@ body:
     attributes:
       value: "<br />"
 
-  - type: input
-    id: d_rel_date_edition
+  - type: markdown
     attributes:
-      label: Edition Release Date
-      description: |
-        If unable to find anything substantial for your release, using the most recent copyright year is acceptable.
-        Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if only an approximation. Can also use the form yyyy-Q# if only the year quarter is known.
+      value: "### Release Date"
+  - type: markdown
+    attributes:
+      value: |
+        ##### Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if only an approximate date. Can also use the form yyyy-Q# if only the year quarter is known.
+        If unable to find any substantial release date info for your release, referring to the listed copyright year(s) is acceptable (include "©" or "℗" symbols in that case).
+
+  - type: input
+    id: d_rel_date_item
+    attributes:
+      label: Item Release Date
+      description: Release date of the specific item/release in your hand. If a re-release, this would be the release date of your particular edition/version. If different regions released the item on different dates, this would be the release date for the specific region.
     validations:
       required: true
+  - type: input
+    id: d_rel_date_original
+    attributes:
+      label: Work Original Release Date
+      description: (Optional) This is the original release date/premiere of the work overall. If your version is the original version of the work, just put "Same as above".
+      value: "--"
+  - type: checkboxes
+    id: d_rel_date_certainty
+    attributes:
+      label: Check below if uncertain about the above dates.
+      options:
+        - label: "'Item Release Date' Uncertain"
+        - label: "'Work Original Release Date' Uncertain"
 
   - type: markdown
     attributes:
