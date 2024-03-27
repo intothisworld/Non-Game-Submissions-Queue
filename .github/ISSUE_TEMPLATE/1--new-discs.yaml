@@ -391,7 +391,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ##### (Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if values are only approximate. Can also use the form yyyy-Q# if only the year quarter is known. If unable to find any substantial release date info for your release, referring to the listed copyright year(s) is acceptable (include "©" or "℗" symbols in that case).)
+        > (Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if values are only approximate. Can also use the form yyyy-Q# if only the year quarter is known. If unable to find any substantial release date info for your release, referring to the listed copyright year(s) is acceptable (include "©" or "℗" symbols in that case).)
 
   - type: input
     id: d_rel_date_item
@@ -1126,9 +1126,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Ringcode information is <b><i>required</i></b> for all submissions. Please check very carefully. Some ringcodes (particularly mould text), can be very difficult to read clearly or even see sometimes. A magnifying glass can be very helpful here. And if you really want to be about as prepared as you can be for any difficulty of ringcode, a jeweler's loupe is absolutely the way to go. The types with both 30x and 60x magnification are the most useful here, and you can usually find those for under $10 on Amazon.
-
-        In regards to ringcodes for discs with multiple layers: *Most* of the time the innermost ringcodes near the center hub will correlate to layer 0, and the next ring out will be for layer 1, and so on. This is not always the case though as some manufacturers will inscribe the ringcodes in reverse order (the outermost ring for layer 0 and then ascending inward). If you're unsure of the correct order of your disc's codes, just fill in the fields below using the typical ordering (innermost to outermost), and the mods will check and correct the order if necessary.
+        > Ringcode information is <b><i>required</i></b> for all submissions. Please check very carefully. Some ringcodes (particularly mould text), can be very difficult to read clearly or even see sometimes. A magnifying glass can be very helpful here. And if you really want to be about as prepared as you can be for any difficulty of ringcode, a jeweler's loupe is absolutely the way to go. The types with both 30x and 60x magnification are the most useful here, and you can usually find those for under $10 on Amazon.
+        >
+        > In regards to ringcodes for discs with multiple layers: *Most* of the time the innermost ringcodes near the center hub will correlate to layer 0, and the next ring out will be for layer 1, and so on. This is not always the case though as some manufacturers will inscribe the ringcodes in reverse order (the outermost ring for layer 0 and then ascending inward). If you're unsure of the correct order of your disc's codes, just fill in the fields below using the typical ordering (innermost to outermost), and the mods will check and correct the order if necessary.
   # Skip d_ring - Unused in submission form
   # Skip d_ring_0_id - Unused in submission form
   
