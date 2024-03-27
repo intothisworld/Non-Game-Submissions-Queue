@@ -397,7 +397,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        > (Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if values are only approximate. Can also use the form yyyy-Q# if only the year quarter is known. If unable to find any substantial release date info for your release, referring to the listed copyright year(s) is acceptable (include "©" or "℗" symbols in that case).)
+        > Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if values are only approximate. Can also use the form yyyy-Q# if only the year quarter is known. If unable to find any substantial release date info for your release, referring to the listed copyright year(s) is acceptable (include "©" or "℗" symbols in that case).
 
   - type: input
     id: d_rel_date_item
@@ -1138,10 +1138,6 @@ body:
   # Skip d_ring - Unused in submission form
   # Skip d_ring_0_id - Unused in submission form
   
-  - type: markdown
-    attributes:
-      value: "<br />"
-
   - type: dropdown
     id: d_ring_order
     attributes:
