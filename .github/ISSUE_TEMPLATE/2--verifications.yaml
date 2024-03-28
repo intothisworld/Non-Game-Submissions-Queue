@@ -355,15 +355,6 @@ body:
     attributes:
       value: "### Version and Editions"
   - type: input
-    id: d_bundle
-    attributes:
-      label: Bundle
-      description: |
-        A bundle is any multi-disc set. If none, put "Standalone". If unknown, put "Unknown".
-        (ex: 'The Legend of Korra: The Complete Series', '20th Anniversary Collector's Boxset', 'Blu-ray Combo Pack')
-    validations:
-      required: true
-  - type: input
     id: d_editions
     attributes:
       label: Edition
@@ -376,16 +367,25 @@ body:
     id: d_version
     attributes:
       label: Version
-      description: "(ex: 'v1.02', 'Rev 1')"
+      description: "(ex: 'v1.02', 'Rev 1', 'Demo')"
       value: --
   - type: input
     id: d_collection
     attributes:
       label: Collections
       description: |
-        If multiple, separate with a semicolon.
+        Used for cross-release branding/grouping by the publisher or distributor. If multiple, separate with a semicolon.
         (ex: 'Criterion Collection', 'New Line Platinum Series', 'Disney's Diamond Collection')
       value: --
+  - type: input
+    id: d_bundle
+    attributes:
+      label: Bundle
+      description: |
+        A bundle is any product/release that's made up of more than just a single piece of media. If none, put "Standalone". If unknown, put "Unknown".
+        (ex: 'The Legend of Korra: The Complete Series', '20th Anniversary Collector's Boxset', 'Blu-ray Combo Pack')
+    validations:
+      required: true
 
   - type: markdown
     attributes:
@@ -398,24 +398,23 @@ body:
     attributes:
       value: |
         > Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if values are only approximate. Can also use the form yyyy-Q# if only the year quarter is known. If unable to find any substantial release date info for your release, referring to the listed copyright year(s) is acceptable (include "©" or "℗" symbols in that case).
-
   - type: input
     id: d_rel_date_item
     attributes:
       label: Item Release Date
-      description: Release date of the specific item/release in your hand. If a re-release, this would be the release date of your particular edition/version. If different regions released the item on different dates, this would be the release date for the specific region.
+      description: Release date of the specific item/release in your hand. If a re-release, this would be the release date of your particular edition/version. If different regions released the item on different dates, this would be the release date for that specific regional version.
     validations:
       required: true
   - type: input
     id: d_rel_date_original
     attributes:
       label: Work Original Release Date
-      description: (Optional) This is the original release date/premiere of the work overall. If your version is the original version of the work, just put "Same as above".
+      description: (Optional) This is the original release date/premiere of the work overall. If your version is the original release of the work, just put "Same as above".
       value: "--"
   - type: checkboxes
     id: d_rel_date_certainty
     attributes:
-      label: Check below if uncertain about the above dates.
+      label: Check below if uncertain about either of the above dates.
       options:
         - label: "'Item Release Date' Uncertain"
         - label: "'Work Original Release Date' Uncertain"
@@ -918,6 +917,16 @@ body:
     attributes:
       value: "<br />"
 
+  - type: textarea
+    attributes:
+      label: External Link(s)
+      description: If multiple links, please put on separate lines.
+      value: "--"
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
   # Category Tags
   - type: markdown
     attributes:
@@ -1397,6 +1406,16 @@ body:
       description: Please attach dump logs (mandatory). Photos/scans are not required, but are extremely helpful and highly encouraged.
     validations:
       required: true
+  - type: dropdown
+    id: photos_preference
+    attributes:
+      label: Photos Visibility Preference?
+      description: If including photos, how available would you like them to be in the database?
+      options:
+        - Openly visible on media entry page
+        - Stored with logs (only accessible if browsing logs)
+        - Unavailable for reference after submission is processed
+
 
   - type: markdown
     attributes:
@@ -1410,4 +1429,4 @@ body:
     id: user_feedback
     attributes:
       label: User Feedback
-      description: This submission form is a bit of a rough draft of the submission form that will be used on the project's website once it is established. What did you think? Anything you particularly liked or disliked? Do you have any suggestions for things that could be changed or implemented, or questions about things that need to be clarified? Please let us know your thoughts. Thanks for contributing!
+      description: This submission form is a rough draft of the submission form that will be used on the project's website once it is established. What did you think? Anything you particularly liked or disliked? Do you have any suggestions for things that could be changed or implemented, or questions about things that need to be clarified? Please let us know your thoughts. Thanks for contributing!
