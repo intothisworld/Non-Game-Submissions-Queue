@@ -385,9 +385,7 @@ body:
     id: d_bundle_type
     attributes:
       label: Bundle Type
-      description: |
-        Bundle type is determined by the primary feature item of the bundle. If multiple types of media share equal prominence in the bundle, 'Multiformat Bundle' can be used.
-        (ex: 'DVD Bundle', 'CD Bundle', 'Product Bundle', 'Hardware Bundle', 'OEM', etc.)"
+      description: "(ex: 'DVD Bundle', 'Multiformat Bundle', 'Product Bundle', 'Hardware Bundle', 'OEM', 'Blu-ray Combo Pack', '4K UHD Combo Pack', etc.)"
 
   - type: markdown
     attributes:
@@ -1063,11 +1061,15 @@ body:
     validations:
       required: True
 
-  - type: input
-    id: d_categories_media_special
+  - type: markdown
     attributes:
-      label: Media Additional Notable Characteristics
-      description: (e.g. 'Double-Sided DVD', 'Hybrid SACD', 'CD/DVD/BD-R', 'Blu-ray 3D', 'Shaped CD', 'Tao iKTV', etc.)
+      value: "<br />"
+
+  - type: input
+    id: d_categories_media_secondary
+    attributes:
+      label: Media (Secondary)
+      description: (e.g. 'CD/DVD/BD-R', 'Blu-ray 3D', 'Hybrid SACD', 'HDCD/HDCD (Partial)', 'Tao iKTV', 'Double-Sided DVD', 'Shaped CD', etc.)
       value: "--"
 
   - type: markdown
