@@ -378,8 +378,16 @@ body:
       description: |
         A bundle is any product/release that's made up of more than just a single piece of media. If none, put "Standalone". If unknown, put "Unknown".
         (ex: 'The Legend of Korra: The Complete Series', '20th Anniversary Collector's Boxset', 'Blu-ray Combo Pack')
+        (Note: Bundle name and Edition name can be the same thing.)
     validations:
       required: true
+  - type: input
+    id: d_bundle_type
+    attributes:
+      label: Bundle Type
+      description: |
+        Bundle type is determined by the primary feature item of the bundle. If multiple types of media share equal prominence in the bundle, 'Multiformat Bundle' can be used.
+        (ex: 'DVD Bundle', 'CD Bundle', 'Product Bundle', 'Hardware Bundle', 'OEM', etc.)"
 
   - type: markdown
     attributes:
@@ -914,7 +922,7 @@ body:
   - type: textarea
     attributes:
       label: External Link(s)
-      description: If multiple links, please put on separate lines.
+      description: If multiple links, please use separate lines.
       value: "--"
 
   - type: markdown
@@ -1007,7 +1015,7 @@ body:
       value: "<br />"
 
   - type: dropdown
-    id: d_categories_special
+    id: d_categories_interest
     attributes:
       label: Special Interest Tags
       multiple: true
@@ -1054,6 +1062,13 @@ body:
         - Other (Specify in comments)
     validations:
       required: True
+
+  - type: input
+    id: d_categories_media_special
+    attributes:
+      label: Media Additional Notable Characteristics
+      description: (e.g. 'Double-Sided DVD', 'Hybrid SACD', 'CD/DVD/BD-R', 'Blu-ray 3D', 'Shaped CD', 'Tao iKTV', etc.)
+      value: "--"
 
   - type: markdown
     attributes:
@@ -1108,7 +1123,7 @@ body:
 
         ---Example formatting for software discs---
         System Requirements: (Windows 95, 98, 2000; Mac OS X 10.6 or higher, etc.)
-        Compatible Architectures: (x86, m68k, PowerPC, ARM, etc.)
+        Platform/Architecture Compatibility: (Win(x86), Mac(m68k), Mac(PowerPC), Mac(x86), Mac(ARM), etc.)
         Loaded disc to confirm?: (Yes or No, or specify discrepancies) [Note: If checking on Mac, please disable Rosetta first.]
       render: Text
 
