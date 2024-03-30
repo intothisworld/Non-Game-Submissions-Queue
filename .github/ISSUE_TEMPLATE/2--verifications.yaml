@@ -367,7 +367,7 @@ body:
     id: d_version
     attributes:
       label: Version
-      description: "(ex: 'v1.02', 'Rev 1', 'Demo')"
+      description: "(ex: 'v1.02', 'Rev 1', 'Proto')"
       value: --
   - type: input
     id: d_collection
@@ -391,7 +391,7 @@ body:
     id: d_bundle_type
     attributes:
       label: Bundle Type
-      description: "(ex: 'DVD Bundle', 'Multiformat Bundle', 'Product Bundle', 'Hardware Bundle', 'OEM', 'Blu-ray Combo Pack', '4K UHD Combo Pack', etc.)"
+      description: "(ex: 'DVD Bundle', 'CD Bundle', 'Multiformat Bundle', 'Product Bundle', 'Hardware Bundle', 'OEM', 'Blu-ray Combo Pack', '4K UHD Combo Pack', etc.)"
 
   - type: markdown
     attributes:
@@ -1089,12 +1089,12 @@ body:
   - type: input
     id: d_universal_hash
     attributes:
-      label: Universal Hash (SHA-1)
+      label: "Universal Hash (SHA-1): "
       value: --
   - type: input
     id: d_data_start
     attributes:
-      label: Non-zero data start
+      label: "Non-zero data start: "
       value: --
 
   - type: textarea
@@ -1173,9 +1173,12 @@ body:
       - N/A (only one set of ringcodes)
       - Innermost to Outermost
       - Outermost to Innermost
-      default: 0
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: "<br />"
 
   - type: markdown
     attributes:
@@ -1367,7 +1370,7 @@ body:
   - type: input
     id: d_offset_text
     attributes:
-      label: Write Offset
+      label: "Write Offset: "
 
   # Sizes and Checksums
   - type: markdown
