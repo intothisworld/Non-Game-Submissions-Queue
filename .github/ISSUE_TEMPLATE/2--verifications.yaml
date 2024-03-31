@@ -377,12 +377,17 @@ body:
         Used for cross-release branding/grouping by the publisher or distributor. If multiple, separate with a semicolon.
         (ex: 'Criterion Collection', 'New Line Platinum Series', 'Disney's Diamond Collection')
       value: --
+
+  - type: markdown
+    attributes:
+      value: "<br />"
+
   - type: input
     id: d_bundle
     attributes:
-      label: Bundle
+      label: Bundle?
       description: |
-        A bundle is any product/release that's made up of more than just a single piece of media. If none, put "Standalone". If unknown, put "Unknown".
+        A bundle is any product/release that's made up of more than just a single piece of media. If yes, enter the bundle's name. If no, put "Standalone". If unknown, put "Unknown".
         (ex: 'The Legend of Korra: The Complete Series', '20th Anniversary Collector's Boxset', 'Blu-ray Combo Pack')
         (Note: Bundle name and Edition name can be the same thing.)
     validations:
@@ -392,6 +397,10 @@ body:
     attributes:
       label: Bundle Type
       description: "(ex: 'DVD Bundle', 'CD Bundle', 'Multiformat Bundle', 'Product Bundle', 'Hardware Bundle', 'OEM', 'Blu-ray Combo Pack', '4K UHD Combo Pack', etc.)"
+  - type: textarea
+    id: d_bundle_contents
+    attributes:
+      label: Bundle Contents
 
   - type: markdown
     attributes:
