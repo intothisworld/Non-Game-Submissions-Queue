@@ -911,8 +911,6 @@ body:
         #- Zhuang
         #- Zulu
         #- Zuni
-    validations:
-      required: true
   # Skip d_languages_selection - PSX/PS2 only
   - type: dropdown
     id: d_languages_check
