@@ -387,7 +387,8 @@ body:
     attributes:
       label: Bundle?
       description: |
-        A bundle is any product/release that's made up of more than just a single piece of media. If yes, enter the bundle's name. If no, put "Standalone". If unknown, put "Unknown".
+        A bundle is any product/release that's made up of more than just a single piece of media.
+        If yes, enter the bundle's name. If no, put "Standalone". If unknown, put "Unknown".
         (ex: 'The Legend of Korra: The Complete Series', '20th Anniversary Collector's Boxset', 'Blu-ray Combo Pack')
         (Note: Bundle name and Edition name can be the same thing.)
     validations:
@@ -472,7 +473,7 @@ body:
     attributes:
       label: "Disc Number - Disc Title"
       description: |
-        Please match how it appears on the release.
+        Please match how it appears on the release as you would with the overall "Source Title" of the release. Any further processing or standardization will be derived from that.
         ex: 'Disc 1 - Film', 'CD2 - Outtakes & Rarities', 'Widescreen Disc'
       value: --
   - type: input
@@ -494,6 +495,7 @@ body:
       multiple: True
       options:
         - Unknown
+        - None
         - Other (specify in comments)
         #- Abkhazian
         #- Achinese
