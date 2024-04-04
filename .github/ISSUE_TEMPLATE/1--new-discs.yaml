@@ -1173,6 +1173,7 @@ body:
     id: d_ring_order
     attributes:
       label: Layer Ring Order
+      description: If unsure, choose "Innermost to Outermost"
       options:
       - Please Select One
       - N/A (only one set of ringcodes)
@@ -1181,117 +1182,10 @@ body:
     validations:
       required: true
 
-  - type: markdown
+  - type: textarea
     attributes:
-      value: "<br />"
-
-  - type: markdown
-    attributes:
-      value: "### Layer 0 / Data Side"
-  - type: input
-    id: d_ring_0_ma
-    attributes:
-      label: Mastering Code (laser branded/etched)
-      value: --
-  - type: input
-    id: d_ring_0_ma_sid
-    attributes:
-      label: Mastering SID Code
-      value: --
-  - type: input
-    id: d_ring_0_ts
-    attributes:
-      label: Toolstamp or Mastering Code (engraved/stamped)
-      value: --
-  - type: input
-    id: d_ring_0_mo_sid
-    attributes:
-      label: Mould SID Code
-      value: --
-  - type: input
-    id: d_ring_0_mo
-    attributes:
-      label: Additional Mould Text
-      value: --
-
-  - type: markdown
-    attributes:
-      value: "<br />"
-
-  - type: markdown
-    attributes:
-      value: "### Layer 1 / Label Side"
-  - type: input
-    id: d_ring_1_ma
-    attributes:
-      label: Mastering Code (laser branded/etched)
-      value: --
-  - type: input
-    id: d_ring_1_ma_sid
-    attributes:
-      label: Mastering SID Code
-      value: --
-  - type: input
-    id: d_ring_1_ts
-    attributes:
-      label: Toolstamp or Mastering Code (engraved/stamped)
-      value: --
-  - type: input
-    id: d_ring_1_mo_sid
-    attributes:
-      label: Mould SID Code
-      value: --
-  - type: input
-    id: d_ring_1_mo
-    attributes:
-      label: Additional Mould Text
-      value: --
-
-  - type: markdown
-    attributes:
-      value: "<br />"
-
-  - type: markdown
-    attributes:
-      value: "### Layer 2"
-  - type: input
-    id: d_ring_2_ma
-    attributes:
-      label: Mastering Code (laser branded/etched)
-      value: --
-  - type: input
-    id: d_ring_2_ma_sid
-    attributes:
-      label: Mastering SID Code
-      value: --
-  - type: input
-    id: d_ring_2_ts
-    attributes:
-      label: Toolstamp or Mastering Code (engraved/stamped)
-      value: --
-
-  - type: markdown
-    attributes:
-      value: "<br />"
-
-  - type: markdown
-    attributes:
-      value: "### Layer 3"
-  - type: input
-    id: d_ring_3_ma
-    attributes:
-      label: Mastering Code (laser branded/etched)
-      value: --
-  - type: input
-    id: d_ring_3_ma_sid
-    attributes:
-      label: Mastering SID Code
-      value: --
-  - type: input
-    id: d_ring_3_ts
-    attributes:
-      label: Toolstamp or Mastering Code (engraved/stamped)
-      value: --
+      label: "Copy-paste ringcode information here:"
+      render: text
 
   # Skip d_ring_0_offsets - Unused in submission form
   # Skip d_ring_0_0_id - Unused in submission form
