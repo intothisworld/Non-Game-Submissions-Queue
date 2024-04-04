@@ -425,7 +425,7 @@ body:
     id: d_rel_date_original
     attributes:
       label: Work Original Release Date
-      description: (Optional) This is the original release date/premiere of the work overall. If your version is the original release of the work, just put "Same as above".
+      description: (Optional) This is the original release date/premiere of the work overall. If your version is the original release of the work, just put "Same as above". If your disc contains a series, a range of dates can be used.
       value: "--"
   - type: checkboxes
     id: d_rel_date_certainty
@@ -1434,7 +1434,7 @@ body:
     id: attachments
     attributes:
       label: Attachments (Logs & Photos/Scans)
-      description: Please attach dump logs (mandatory). Photos/scans are not required, but are extremely helpful and highly encouraged.
+      description: Please attach dump logs (mandatory). Photos/scans are not required, but are extremely helpful and highly encouraged. GitHub unfortunately has some rather inconvenient file size/type limitations. If necessary, external links can also be included here.
     validations:
       required: true
   - type: dropdown
