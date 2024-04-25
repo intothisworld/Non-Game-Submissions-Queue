@@ -1,4 +1,6 @@
 # Non-Game-Submissions-Queue
+[Note: Starting 2024/05/01, Redumper will be the required program for dumping all non-game discs. DIC dumps made prior to this date will still be accepted, but it is encouraged to redump with Redumper if you are able to.]
+
 Welcome to Non-Game submissions. Please add your submission to the queue by going to "Issues" and selecting the type of submission you are making (New Disc, Verification, or Fix).
 
 Please, please make sure that all the information gathered for your submission is correct and complete before submitting. Go <i>slowly</i>, and check and double-check each item of information as you transcribe it from your release/disc, especially when it comes to the more precise fields like serials, ringcodes, and barcodes.

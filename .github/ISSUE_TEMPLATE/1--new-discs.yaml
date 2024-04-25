@@ -33,6 +33,12 @@ body:
       default: 0
     validations:
       required: true
+  - type: input
+    id: d_media_secondary
+    attributes:
+      label: Media (Secondary)
+      description: (e.g. 'CD/DVD/BD-R', 'Blu-ray 3D', 'Hybrid SACD', 'HDCD/HDCD (Partial)', 'Tao iKTV', 'Double-Sided DVD', 'Shaped CD', etc.)
+      value: --
 
   - type: markdown
     attributes:
@@ -392,10 +398,12 @@ body:
     attributes:
       label: Bundle Type
       description: "(ex: 'DVD Bundle', 'CD Bundle', 'Multiformat Bundle', 'Product Bundle', 'Hardware Bundle', 'OEM', 'Blu-ray Combo Pack', '4K UHD Combo Pack', etc.)"
+      value: --
   - type: textarea
     id: d_bundle_contents
     attributes:
       label: Bundle Contents
+      value: --
 
   - type: markdown
     attributes:
@@ -407,12 +415,19 @@ body:
   - type: markdown
     attributes:
       value: |
-        > Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if values are only approximate. Can also use the form yyyy-Q# if only the year quarter is known. If unable to find any substantial release date info for your release, referring to the listed copyright year(s) is acceptable (include "©" or "℗" symbols in that case).
+        > Use the form yyyy-MM-dd. Replace any unknown digits with x's. Add circa ("c.") if values are only approximate. Can also use the form yyyy-Q# if only the year quarter is known. If unable to find any substantial release date info for your release, referring to the listed copyright year(s) are acceptable.
   - type: input
     id: d_rel_date_item
     attributes:
       label: Item Release Date
-      description: Release date of the specific item/release in your hand. If a re-release, this would be the release date of your particular edition/version. If different regions released the item on different dates, this would be the release date for that specific regional version.
+      description: Release date of the specific item/release in your hand. If a re-release, this would be the release date of your particular edition/version. If different regions released the item on different dates, this would be the release date for that specific regional release.
+    validations:
+      required: true
+  - type: input
+    id: d_rel_date_source
+    attributes:
+      label: Date Source
+      description: If determined from the copyright date, put 'Copyright'. If from an external source, please link to that source.
     validations:
       required: true
   - type: input
@@ -420,14 +435,7 @@ body:
     attributes:
       label: Work Original Release Date
       description: (Optional) This is the original release date/premiere of the work overall. If your version is the original release of the work, just put "Same as above". If your disc contains a series, a range of dates can be used.
-      value: "--"
-  - type: checkboxes
-    id: d_rel_date_certainty
-    attributes:
-      label: Check below if uncertain about either of the above dates.
-      options:
-        - label: "'Item Release Date' Uncertain"
-        - label: "'Work Original Release Date' Uncertain"
+      value: --
 
   - type: markdown
     attributes:
@@ -932,7 +940,7 @@ body:
     attributes:
       label: External Link(s)
       description: If multiple links, please use separate lines.
-      value: "--"
+      value: --
 
   - type: markdown
     attributes:
@@ -1076,17 +1084,6 @@ body:
     attributes:
       value: "<br />"
 
-  - type: input
-    id: d_categories_media_secondary
-    attributes:
-      label: Media (Secondary)
-      description: (e.g. 'CD/DVD/BD-R', 'Blu-ray 3D', 'Hybrid SACD', 'HDCD/HDCD (Partial)', 'Tao iKTV', 'Double-Sided DVD', 'Shaped CD', etc.)
-      value: "--"
-
-  - type: markdown
-    attributes:
-      value: "<br />"
-
   # Additional Common Info
   - type: markdown
     attributes:
@@ -1115,7 +1112,7 @@ body:
     attributes:
       label: Technical
       description: |
-        Filling in this information is not required, but encouraged. Due to inconsistencies in how technical details are listed on different releases, please simply transcribe the info as it appears on your release. We'll look at potentially standardizing all the terminology later.
+        Filling in this type of information is not required, but encouraged when applicable. Due to inconsistencies in how technical details are listed on different releases, please simply transcribe the info as it appears on your release. We'll look at potentially standardizing all the terminology later.
 
         Transcribing from the packaging is more than enough, but if you decide to go the extra mile and load up the disc contents to confirm, that is great and very appreciated and there is an extra field included here to indicate that you confirmed the technical details in this way.
 
