@@ -427,7 +427,7 @@ body:
     id: d_rel_date_source
     attributes:
       label: Date Source
-      description: If determined from the copyright date, put 'Copyright'. If from an external source, please link to that source.
+      description: If determined via an external source, please link to that source. If only determined from the copyright date, just put "Copyright".
     validations:
       required: true
   - type: input
